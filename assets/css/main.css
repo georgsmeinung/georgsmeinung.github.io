@@ -1,5 +1,8 @@
 @import url(fontawesome-all.min.css);
+/*
 @import url("https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i");
+*/
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@110,100..900&display=swap')
 
 /*
 	Story by HTML5 UP
@@ -99,8 +102,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: #235789;
-		color: #ffffff;
+		background: #ffffff;
+		color: #000000;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -153,12 +156,12 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #235789;
-		color: #ffffff;
+		background: #ffffff;
+		color: #666666;
 	}
 
 	body, input, select, textarea {
-		font-family: "Inter", Helvetica, sans-serif;
+		font-family: "Encode", Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 300;
 		line-height: 1.65;
@@ -211,12 +214,12 @@ input, select, textarea {
 
 	h2 {
 		font-size: 2.25rem;
-		color: #efca08;
+		color: #111111;
 	}
 
 	h3 {
 		font-size: 1.5rem;
-		color: #ff8600;
+		color: #444444;
 	}
 
 	h4 {
@@ -323,17 +326,18 @@ input, select, textarea {
 	}
 
 	a {
-		color: #97f9f9;
+		color: #1e769a; 
 	}
 
 		a:hover {
-			color: #1b9aaa;
+			color: #0165fc;
 		}
 
-	/*
+	
 	strong, b {
-		color: #000000;
-	} 
+		color: #0165fc;
+	}
+	*/
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #000000;
