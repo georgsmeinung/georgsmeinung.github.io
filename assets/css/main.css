@@ -3232,4 +3232,26 @@ input, select, textarea {
 		.noprint {
 		visibility: hidden;
 		}
+
+		@page {
+			size: A4; /* DIN A4 standard, Europe */
+			margin: 0;
+		}
+		
+		html, body {
+			width: 210mm;
+			/* height: 297mm; */
+			height: 282mm;
+			font-size: 11px;
+			background: #FFF;
+			overflow: visible;
+		}
+		
+		body {
+			padding-top: 15mm;
+		}
+
+		div {
+			break-inside: avoid;
+		}
 	}
