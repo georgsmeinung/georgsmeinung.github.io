@@ -3225,3 +3225,11 @@ input, select, textarea {
 			}
 
 	}
+
+/* Side bar invisiblie in print */
+
+	@media print {
+		.noprint {
+		visibility: hidden;
+		}
+	}
