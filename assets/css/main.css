@@ -3226,7 +3226,7 @@ input, select, textarea {
 
 	}
 
-/* Side bar invisiblie in print */
+/* Side bar invisible in print */
 
 	@media print {
 		.noprint {
