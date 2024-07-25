@@ -2,7 +2,7 @@
 /*
 Loads Font: https://fonts.google.com/specimen/Hind
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
 
 
 /*
@@ -105,7 +105,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #a2a2a2;
-		font-family: "Noto Sans", Helvetica, sans-serif;
+		font-family: "Hind", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
