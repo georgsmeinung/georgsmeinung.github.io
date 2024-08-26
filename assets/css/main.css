@@ -1,18 +1,16 @@
-@import url("fontawesome-all.min.css");
-/*
-Loads Font: https://fonts.google.com/specimen/Hind
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&
-display=swap");
-*/
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
-
 /*
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	2024-0724: Modified by Jorge Nicolau
+	2024-0826: Modified by Jorge Nicolau
 */
 
+
+@import url("fontawesome-all.min.css");
+/*
+Loads Font: https://fonts.google.com/specimen/Hind
+*/
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
