@@ -103,8 +103,8 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
-		font-family: "Noto Sans", Helvetica, sans-serif;
+		color: #4C4C4C;
+		font-family: "Hind", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -222,7 +222,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: "Consolas", monospace;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
