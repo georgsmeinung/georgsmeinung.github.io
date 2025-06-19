@@ -44,14 +44,14 @@
 			</div>
 
 			<!-- Placeholder for footer -->
-			<div id="footer-container"></div>
+			<footer id="footer"></footer>
 
 			<!-- Script to load footer -->
 			<script>
 				fetch('footer.html')
 					.then(response => response.text())
 					.then(data => {
-						document.getElementById('footer-container').innerHTML = data;
+						document.getElementById('footer').innerHTML = data;
 						fetch('assets/info.json')
 							.then(response => response.json())
 							.then(data => {
