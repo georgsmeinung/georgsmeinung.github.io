@@ -116,7 +116,7 @@
 						fetch('assets/info.json')
 							.then(response => response.json())
 							.then(data => {
-								document.getElementById('copymessage').textContent = `v:${data.copymessage}`;
+								document.getElementById('copymessage').textContent = `${data.copymessage}`;
 								document.getElementById('version').textContent = `v:${data.version}`;
 							})
 							.catch(error => {
