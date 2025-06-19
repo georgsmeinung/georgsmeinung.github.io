@@ -52,6 +52,16 @@
 					.then(response => response.text())
 					.then(data => {
 						document.getElementById('footer-container').innerHTML = data;
+						fetch('assets/info.json')
+							.then(response => response.json())
+							.then(data => {
+								document.getElementById('copymessage').textContent = `v:${data.copymessage}`;
+								document.getElementById('version').textContent = `v:${data.version}`;
+							})
+							.catch(error => {
+								console.error('Error al cargar la versión:', error);
+								document.getElementById('version').textContent = 'v:Error';
+							});
 					})
 					.catch(error => {
 						console.error('Error loading footer:', error);

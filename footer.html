@@ -13,16 +13,3 @@
         </ul>
     </div>
 </footer>
-
-<script>
-    fetch('assets/info.json')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('copymessage').textContent = `v:${data.copymessage}`;
-            document.getElementById('version').textContent = `v:${data.version}`;
-        })
-        .catch(error => {
-            console.error('Error al cargar la versión:', error);
-            document.getElementById('version').textContent = 'v:Error';
-        });
-</script>
