@@ -1,0 +1,28 @@
+<!-- footer.html -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://twitter.com/jorgenicolau_ar" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.linkedin.com/in/jorgenicolau/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/georgsmeinung" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li id="copymessage">Loading...</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li id="version">v: Loading...</li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    fetch('assets/info.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('copymessage').textContent = `v:${data.copymessage}`;
+            document.getElementById('version').textContent = `v:${data.version}`;
+        })
+        .catch(error => {
+            console.error('Error al cargar la versión:', error);
+            document.getElementById('version').textContent = 'v:Error';
+        });
+</script>
