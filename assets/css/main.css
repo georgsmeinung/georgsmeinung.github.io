@@ -9,14 +9,16 @@
 @import url("fontawesome-all.min.css");
 /*
 Loads Font: https://fonts.google.com/specimen/Inter
-*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 
-/* Overpass Font */
-@import url('https://overpass-30e2.kxcdn.com/overpass.css');
+/* Overpass Font
+@import url('https://overpass-30e2.kxcdn.com/overpass.css'); */
 
 /* Noto Sans Font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Ubuntu Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@500&display=swap');
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -146,7 +148,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Noto Sans", "overpass", "Inter", Helvetica, sans-serif;
+		font-family: "Ubuntu", "overpass", "Inter", Helvetica, sans-serif;
 		color: #00565E;
 		font-weight: 400;
 		line-height: 1em;
