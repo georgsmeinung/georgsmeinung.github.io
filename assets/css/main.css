@@ -15,6 +15,9 @@ Loads Font: https://fonts.google.com/specimen/Inter
 /* Overpass Font */
 @import url('https://overpass-30e2.kxcdn.com/overpass.css');
 
+/* Noto Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -107,7 +110,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #4C4C4C;
-		font-family: "Inter", Helvetica, sans-serif;
+		font-family: "Noto Sans", "Inter", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -143,7 +146,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "overpass", "Inter", Helvetica, sans-serif;
+		font-family: "Noto Sans", "overpass", "Inter", Helvetica, sans-serif;
 		color: #00565E;
 		font-weight: 400;
 		line-height: 1em;
