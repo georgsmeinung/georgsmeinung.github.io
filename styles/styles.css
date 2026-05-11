@@ -1,10 +1,10 @@
 body {
     font-family: sans-serif;
     line-height: 1.6;
-    color: #2f3640;
+    color: #2a2e34;
     margin: 0;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #f7f7f6;
 }
 .container {
     max-width: 800px;
@@ -23,12 +23,12 @@ a {
     color: #71808d;
 }
 h1 {
-    color: #9e1b32;
+    color: #c1122e ;
 }
 h2,
 h3 {
-    color: #7e1528;
+    color: #7b8088;
 }
 h4 {
-    color: #3f0a14;
+    color: #5b5f66 ;
 }
