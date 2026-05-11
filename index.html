@@ -1,83 +1,78 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jorge Nicolau</title>
-		<link rel="icon" href="images/favicon.svg">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="image avatar"><img src="https://avatars.githubusercontent.com/u/22195389?v=4" alt="" /></a>
-					<h1><strong>Jorge Nicolau</strong><br/>
-					AI Solutions Architect</h1>
-				</div>
-			</header>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h1>Jorge Nicolau</h1>
-							<h3>AI Solutions Architect</h3>
-						</header>
-						<p>I'm working in the information technology and services industry. I'm mainly skilled in Node.js, Python, Java and C# and Cloud Platforms. I design and implement highly available distributed systems. I have knowledge on IoT, Big Data and Blockchain foundations. I'm based in <a href="https://en.wikipedia.org/wiki/Buenos_Aires">Buenos Aires, Argentina</a></p>
-						<p>I'm a strong engineering professional with a <a href="https://utn.edu.ar/es/estudiar-utn?tipo_busqueda=carreras&id_tipos_carreras=1&id_seleccion=8">Computer Sciences</a> degree from <a href="https://utn.edu.ar/es/">Universidad Tecnológica Nacional</a> and I'm currently pursuing a <a href="https://www.austral.edu.ar/ingenieria/ingenieria-posgrados/ciencia-de-datos/maestria-en-ciencia-de-datos-presencial/">Master in Data Sciences</a> post-graduate degree from <a href="https://www.austral.edu.ar/">Universidad Austral</a>. I've worked at <a href="https://www.chazki.com/">Chazki</a>, <a href="https://auth0.com">Okta</a>, <a href="https://www.globallogic.com/latam/">GlobalLogic Latam</a>, <a href="https://es.nttdata.com/">NTT Data Argentina</a> and <a href="https://www.viterra.com/">Viterra</a>. I'm currently working as a Cloud & Custom Architecture + Data/AI Practice Lead at <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>.</p>
-						<p>I like learning languages--I speak six for the time being. I enjoy travelling and learning new things, especially about science, history and geography-- also I'm a map geek. I love to read-- mainly science, sci-fi and history.</p>
-						<ul class="actions">
-							<li><a href="resume.html" class="button">Learn More</a></li>
-						</ul>
-					</section>
-
-			</div>
-
-			<!-- Placeholder for footer -->
-			<footer id="footer"></footer>
-
-			<!-- Script to load footer -->
-			<script>
-				fetch('footer.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('footer').innerHTML = data;
-						fetch('assets/info.json')
-							.then(response => response.json())
-							.then(data => {
-								document.getElementById('copymessage').textContent = `${data.copymessage}`;
-								document.getElementById('version').textContent = `v:${data.version}`;
-							})
-							.catch(error => {
-								console.error('Error al cargar la versión:', error);
-								document.getElementById('version').textContent = 'v:Error';
-							});
-					})
-					.catch(error => {
-						console.error('Error loading footer:', error);
-						document.getElementById('footer-container').innerHTML = '<p>Error loading footer</p>';
-					});
-			</script>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jorge Nicolau - AI Solutions Architect</title>
+        <link rel="icon" href="images/favicon.svg" />
+        <link rel="stylesheet" href="styles/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img
+                    src="images/profilebw.png"
+                    alt="Profile Picture"
+                    width="20%"
+                />
+                <h1>Jorge Nicolau &dash; AI Solutions Architect</h1>
+            </header>
+            <main>
+                <article>
+                    <p>
+                        I'm working in the information technology and services
+                        industry. I'm mainly skilled in Node.js, Python, Java
+                        and C# and Cloud Platforms. I design and implement
+                        highly available distributed systems. I have knowledge
+                        on IoT, Big Data and Blockchain foundations. I'm based
+                        in
+                        <a href="https://en.wikipedia.org/wiki/Buenos_Aires"
+                            >Buenos Aires, Argentina</a
+                        >
+                    </p>
+                    <p>
+                        I'm a strong engineering professional with a
+                        <a
+                            href="https://utn.edu.ar/es/estudiar-utn?tipo_busqueda=carreras&id_tipos_carreras=1&id_seleccion=8"
+                            >Computer Sciences</a
+                        >
+                        degree from
+                        <a href="https://utn.edu.ar/es/"
+                            >Universidad Tecnológica Nacional</a
+                        >
+                        and I'm currently pursuing a
+                        <a
+                            href="https://www.austral.edu.ar/ingenieria/ingenieria-posgrados/ciencia-de-datos/maestria-en-ciencia-de-datos-presencial/"
+                            >Master in Data Sciences</a
+                        >
+                        post-graduate degree from
+                        <a href="https://www.austral.edu.ar/"
+                            >Universidad Austral</a
+                        >. I've worked at
+                        <a href="https://www.chazki.com/">Chazki</a>,
+                        <a href="https://auth0.com">Okta</a>,
+                        <a href="https://www.globallogic.com/latam/"
+                            >GlobalLogic Latam</a
+                        >,
+                        <a href="https://es.nttdata.com/">NTT Data Argentina</a>
+                        and <a href="https://www.viterra.com/">Viterra</a>. I'm
+                        currently working as a Cloud & Custom Architecture +
+                        Data/AI Practice Lead at
+                        <a href="https://www.capgemini.com/" target="_blank"
+                            >Capgemini</a
+                        >.
+                    </p>
+                    <p>
+                        I like learning languages--I speak six for the time
+                        being. I enjoy travelling and learning new things,
+                        especially about science, history and geography-- also
+                        I'm a map geek. I love to read-- mainly science, sci-fi
+                        and history.
+                    </p>
+                </article>
+                <a href="resume.html">&lt;Learn More&gt;</a>
+            </main>
+            <footer><p>&copy;2026 by Jorge Nicolau</p></footer>
+        </div>
+    </body>
 </html>
-
-
-
