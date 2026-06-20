@@ -36,35 +36,38 @@ body {
     padding: 20px;
     background-color: #f7f7f6;
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
+
 header,
 footer {
     text-align: left;
     padding: 20px 0;
     color: #1e1e1e;
 }
+
 main {
     padding: 20px 0;
 }
+
 a {
     color: #71808d;
 }
+
 h1 {
     font-family: "Libre Bodoni", serif;
     color: #c1122e ;
 }
 
-h2 {
+h2,
+h3 {
     font-family: "Libre Bodoni", serif;
     color: #7b8088 ;
 }
 
-h3 {
-    color: #7b8088;
-}
 h4 {
     color: #5b5f66 ;
 }
