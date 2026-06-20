@@ -62,9 +62,12 @@ h1 {
     color: #c1122e ;
 }
 
-h2,
-h3 {
+h2 {
     font-family: "Libre Bodoni", serif;
+    color: #7b8088 ;
+}
+
+h3 {
     color: #7b8088 ;
 }
 
