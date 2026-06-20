@@ -31,10 +31,10 @@ Loads font https://fonts.google.com/specimen/Inter+Tight
 body {
     font-family: "Arimo", sans-serif;
     line-height: 1.6;
-    color: #2a0c4e;
+    color: #2B2D42;
     margin: 0;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #EDF2F4;
 }
 
 .container {
@@ -54,12 +54,12 @@ main {
 }
 
 a {
-    color: #51355a;
+    color: #8D99AE;
 }
 
 h1 {
     font-family: "Libre Bodoni", serif;
-    color: #9e2b25 ;
+    color: #D80032 ;
 }
 
 h2 {
