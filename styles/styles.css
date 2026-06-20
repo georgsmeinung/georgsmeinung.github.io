@@ -3,6 +3,10 @@ Loads font https://fonts.google.com/specimen/Inter+Tight
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+
 .inter-tight-regular {
   font-family: "Inter Tight", sans-serif;
   font-optical-sizing: auto;
@@ -10,8 +14,22 @@ Loads font https://fonts.google.com/specimen/Inter+Tight
   font-style: normal;
 }
 
+.arimo-regular {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-bodoni-regular {
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Arimo", sans-serif;
     line-height: 1.6;
     color: #2a2e34;
     margin: 0;
@@ -35,8 +53,10 @@ a {
     color: #71808d;
 }
 h1 {
+    font-family: "Libre Bodoni", serif;
     color: #c1122e ;
 }
+
 h2,
 h3 {
     color: #7b8088;
