@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +9,19 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <!-- Inline script to set the theme before rendering to avoid flicker -->
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
 </head>
+
 <body>
     <div class="container">
         <!-- Sidebar Navigation -->
@@ -35,7 +39,8 @@
                 </div>
                 <div class="info-item">
                     <span class="info-label">Location</span>
-                    <span class="info-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos Aires, AR</a></span>
+                    <span class="info-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos
+                            Aires, AR</a></span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Current Org</span>
@@ -66,7 +71,8 @@
         <main>
             <header>
                 <h1>Jorge Nicolau</h1>
-                <p class="lead-subtitle">AI Solution Architect &amp; Cloud Custom Architecture + Data/AI Practice Lead</p>
+                <p class="lead-subtitle">AI Solution Architect &amp; Cloud Custom Architecture + Data/AI Practice Lead
+                </p>
                 <div class="badges-row">
                     <span class="badge-pill badge-blue">Cloud Platforms</span>
                     <span class="badge-pill badge-teal">Agentic AI SWE</span>
@@ -85,39 +91,28 @@
                         highly available distributed systems. I have knowledge
                         on IoT, Big Data and Blockchain foundations. I'm based
                         in
-                        <a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank"
-                            >Buenos Aires, Argentina</a
-                        >.
+                        <a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos Aires,
+                            Argentina</a>.
                     </p>
                     <p>
                         I'm a strong engineering professional with a
-                        <a href="https://utn.edu.ar/es/estudiar-utn?tipo_busqueda=carreras&id_tipos_carreras=1&id_seleccion=8" target="_blank"
-                            >Computer Sciences</a
-                        >
+                        <a href="https://utn.edu.ar/es/estudiar-utn?tipo_busqueda=carreras&id_tipos_carreras=1&id_seleccion=8"
+                            target="_blank">Computer Sciences</a>
                         degree from
-                        <a href="https://utn.edu.ar/es/" target="_blank"
-                            >Universidad Tecnológica Nacional</a
-                        >
+                        <a href="https://utn.edu.ar/es/" target="_blank">Universidad Tecnológica Nacional</a>
                         and I'm currently pursuing a
-                        <a href="https://www.austral.edu.ar/ingenieria/ingenieria-posgrados/ciencia-de-datos/maestria-en-ciencia-de-datos-presencial/" target="_blank"
-                            >Master in Data Sciences</a
-                        >
+                        <a href="https://www.austral.edu.ar/ingenieria/ingenieria-posgrados/ciencia-de-datos/maestria-en-ciencia-de-datos-presencial/"
+                            target="_blank">Master in Data Sciences</a>
                         post-graduate degree from
-                        <a href="https://www.austral.edu.ar/" target="_blank"
-                            >Universidad Austral</a
-                        >. I've worked at
+                        <a href="https://www.austral.edu.ar/" target="_blank">Universidad Austral</a>. I've worked at
                         <a href="https://www.chazki.com/" target="_blank">Chazki</a>,
                         <a href="https://auth0.com" target="_blank">Okta</a>,
-                        <a href="https://www.globallogic.com/latam/" target="_blank"
-                            >GlobalLogic Latam</a
-                        >,
+                        <a href="https://www.globallogic.com/latam/" target="_blank">GlobalLogic Latam</a>,
                         <a href="https://es.nttdata.com/" target="_blank">NTT Data Argentina</a>
                         and <a href="https://www.viterra.com/" target="_blank">Viterra</a>. I'm
                         currently working as a Cloud & Custom Architecture +
                         Data/AI Practice Lead at
-                        <a href="https://www.capgemini.com/" target="_blank"
-                            >Capgemini</a
-                        >.
+                        <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>.
                     </p>
                     <p>
                         I like learning languages--I speak six for the time
@@ -127,19 +122,19 @@
                         and history.
                     </p>
                 </article>
-                
+
                 <div style="margin-top: 2.5rem;">
                     <a href="resume.html" class="btn-link">View Detailed Resume &rarr;</a>
-                    <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" class="btn-link">LinkedIn Profile &nearrow;</a>
+                    <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" class="btn-link">LinkedIn
+                        Profile &nearrow;</a>
                 </div>
             </section>
 
             <footer>
                 <p>
                     &copy;2026 by Jorge Nicolau - v:<a
-                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/minimal" target="_blank"
-                        >2026.0620-minimal</a
-                    >
+                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/modern"
+                        target="_blank">2026.0706-modern</a>
                 </p>
             </footer>
         </main>
@@ -148,14 +143,14 @@
     <!-- Theme toggling script -->
     <script>
         const toggleCheckbox = document.getElementById('theme-toggle-checkbox');
-        
+
         // Initial setup based on current theme attribute
         const currentTheme = document.documentElement.getAttribute('data-theme');
         if (currentTheme === 'dark') {
             toggleCheckbox.checked = true;
         }
 
-        toggleCheckbox.addEventListener('change', function() {
+        toggleCheckbox.addEventListener('change', function () {
             if (this.checked) {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
@@ -166,4 +161,5 @@
         });
     </script>
 </body>
+
 </html>
