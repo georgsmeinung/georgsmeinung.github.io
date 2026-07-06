@@ -1,23 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jorge Nicolau - AI Solution Architect</title>
-        <link rel="icon" href="images/favicon.svg" />
-        <link rel="stylesheet" href="styles/styles.css" />
-    </head>
-    <body>
-        <div class="container">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jorge Nicolau - AI Solution Architect</title>
+    <link rel="icon" href="images/favicon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Inline script to set the theme before rendering to avoid flicker -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/profilebw.png" alt="Jorge Nicolau" />
+                <h1 class="sidebar-title">Jorge Nicolau</h1>
+                <p class="sidebar-subtitle">AI Solution Architect</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-item">
+                    <span class="info-label">Role</span>
+                    <span class="info-value">Practice Lead</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Location</span>
+                    <span class="info-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos Aires, AR</a></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Current Org</span>
+                    <span class="info-value"><a href="https://www.capgemini.com/" target="_blank">Capgemini</a></span>
+                </div>
+            </div>
+
+            <nav>
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html" class="active">About Me</a></li>
+                    <li><a href="resume.html">Resume / CV</a></li>
+                    <li><a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/georgsmeinung" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-toggle-container">
+                <span class="theme-label">Dark Mode</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
             <header>
-                <img
-                    src="images/profilebw.png"
-                    alt="Profile Picture"
-                    width="20%"
-                />
-                <h1>Jorge Nicolau &dash; AI Solution Architect</h1>
+                <h1>Jorge Nicolau</h1>
+                <p class="lead-subtitle">AI Solution Architect &amp; Cloud Custom Architecture + Data/AI Practice Lead</p>
+                <div class="badges-row">
+                    <span class="badge-pill badge-blue">Cloud Platforms</span>
+                    <span class="badge-pill badge-teal">Agentic AI SWE</span>
+                    <span class="badge-pill badge-gray">MLOps</span>
+                    <span class="badge-pill badge-orange">Master in Data Sciences (Candidate)</span>
+                </div>
             </header>
-            <main>
+
+            <section id="about">
+                <h2>About Me</h2>
                 <article>
                     <p>
                         I'm working in the information technology and services
@@ -26,36 +85,34 @@
                         highly available distributed systems. I have knowledge
                         on IoT, Big Data and Blockchain foundations. I'm based
                         in
-                        <a href="https://en.wikipedia.org/wiki/Buenos_Aires"
+                        <a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank"
                             >Buenos Aires, Argentina</a
                         >.
                     </p>
                     <p>
                         I'm a strong engineering professional with a
-                        <a
-                            href="https://utn.edu.ar/es/estudiar-utn?tipo_busqueda=carreras&id_tipos_carreras=1&id_seleccion=8"
+                        <a href="https://utn.edu.ar/es/estudiar-utn?tipo_busqueda=carreras&id_tipos_carreras=1&id_seleccion=8" target="_blank"
                             >Computer Sciences</a
                         >
                         degree from
-                        <a href="https://utn.edu.ar/es/"
+                        <a href="https://utn.edu.ar/es/" target="_blank"
                             >Universidad Tecnológica Nacional</a
                         >
                         and I'm currently pursuing a
-                        <a
-                            href="https://www.austral.edu.ar/ingenieria/ingenieria-posgrados/ciencia-de-datos/maestria-en-ciencia-de-datos-presencial/"
+                        <a href="https://www.austral.edu.ar/ingenieria/ingenieria-posgrados/ciencia-de-datos/maestria-en-ciencia-de-datos-presencial/" target="_blank"
                             >Master in Data Sciences</a
                         >
                         post-graduate degree from
-                        <a href="https://www.austral.edu.ar/"
+                        <a href="https://www.austral.edu.ar/" target="_blank"
                             >Universidad Austral</a
                         >. I've worked at
-                        <a href="https://www.chazki.com/">Chazki</a>,
-                        <a href="https://auth0.com">Okta</a>,
-                        <a href="https://www.globallogic.com/latam/"
+                        <a href="https://www.chazki.com/" target="_blank">Chazki</a>,
+                        <a href="https://auth0.com" target="_blank">Okta</a>,
+                        <a href="https://www.globallogic.com/latam/" target="_blank"
                             >GlobalLogic Latam</a
                         >,
-                        <a href="https://es.nttdata.com/">NTT Data Argentina</a>
-                        and <a href="https://www.viterra.com/">Viterra</a>. I'm
+                        <a href="https://es.nttdata.com/" target="_blank">NTT Data Argentina</a>
+                        and <a href="https://www.viterra.com/" target="_blank">Viterra</a>. I'm
                         currently working as a Cloud & Custom Architecture +
                         Data/AI Practice Lead at
                         <a href="https://www.capgemini.com/" target="_blank"
@@ -70,17 +127,43 @@
                         and history.
                     </p>
                 </article>
-                <a href="resume.html">&lt;View Resume&gt;</a>
-                <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank">&lt;View on LinkedIn&gt;</a>
-            </main>
+                
+                <div style="margin-top: 2.5rem;">
+                    <a href="resume.html" class="btn-link">View Detailed Resume &rarr;</a>
+                    <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" class="btn-link">LinkedIn Profile &nearrow;</a>
+                </div>
+            </section>
+
             <footer>
                 <p>
                     &copy;2026 by Jorge Nicolau - v:<a
-                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/minimal"
+                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/minimal" target="_blank"
                         >2026.0620-minimal</a
                     >
                 </p>
             </footer>
-        </div>
-    </body>
+        </main>
+    </div>
+
+    <!-- Theme toggling script -->
+    <script>
+        const toggleCheckbox = document.getElementById('theme-toggle-checkbox');
+        
+        // Initial setup based on current theme attribute
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            toggleCheckbox.checked = true;
+        }
+
+        toggleCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
 </html>

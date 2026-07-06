@@ -1,100 +1,427 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jorge Nicolau - Resume</title>
-        <link rel="icon" href="images/favicon.svg">
-        <link rel="stylesheet" href="styles/styles.css" />
-    </head>
-    <body>
-        <div class="container">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jorge Nicolau - Resume</title>
+    <link rel="icon" href="images/favicon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Inline script to set the theme before rendering to avoid flicker -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/profilebw.png" alt="Jorge Nicolau" />
+                <h1 class="sidebar-title">Jorge Nicolau</h1>
+                <p class="sidebar-subtitle">AI Solution Architect</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-item">
+                    <span class="info-label">Role</span>
+                    <span class="info-value">Practice Lead</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Location</span>
+                    <span class="info-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos Aires, AR</a></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Current Org</span>
+                    <span class="info-value"><a href="https://www.capgemini.com/" target="_blank">Capgemini</a></span>
+                </div>
+            </div>
+
+            <nav>
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="resume.html" class="active">Resume / CV</a></li>
+                    <li><a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/georgsmeinung" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-toggle-container">
+                <span class="theme-label">Dark Mode</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
             <div id="top"></div>
             <header>
-                <img
-                    src="images/profilebw.png"
-                    alt="Profile Picture"
-                    width="20%"
-                />
-                <h1>Jorge Nicolau &dash; AI Solution Architect</h1>
+                <h1>Jorge Nicolau</h1>
+                <p class="lead-subtitle">Professional Resume &amp; Experience Timeline</p>
+                <div class="badges-row">
+                    <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" class="badge-pill badge-blue">LinkedIn Profile</a>
+                    <a href="https://github.com/georgsmeinung" target="_blank" class="badge-pill badge-teal">GitHub Account</a>
+                    <span class="badge-pill badge-gray">Practice Lead</span>
+                    <span class="badge-pill badge-orange">Buenos Aires, Argentina</span>
+                </div>
             </header>
-            <main>
-                <article>
-                    <h2>PROFILE</h2>
-						<p>Senior AI Solutions Architect with extensive expertise in designing, implementing, and governing high-impact technology solutions across the cloud-native and custom application landscapes. Proficient in Java, C#, and major cloud platforms, driving architectural excellence through strategic technology selection and hands-on delivery. Educational foundation includes a B.S. in Computer Engineering from UTN, complemented by an ongoing M.D. in Data Science at Universidad Austral, where research and practice focus on machine learning, advanced analytics, and the engineering of Agentic AI systems. Expert at bridging the gap between software architecture, data engineering, and AI-enabled development, leveraging DevOps and MLOps principles—including CI/CD, reproducibility, and environment automation—to ensure operational excellence. Actively integrates Generative AI and Agentic AI-first practices for code refactoring, architecture analysis, and automated decision support, with a steadfast commitment to building scalable, secure, and resilient enterprise ecosystems.</p>
-					
-					<h2>EXPERIENCE</h2>
-						<h3>Cloud & Custom Architecture + Data/AI Practice Lead</h3>
-						<h4><a href="https://www.capgemini.com/" target="_blank">Capgemini</a>, October 2025 - Current</h4>
-						<p>Lead the definition, evolution, and adoption of engineering best practices across cloud platforms, custom application architectures, and Data Science and Machine Learning ecosystems, aligning solutions with client technology landscapes and business objectives while integrating AI-driven development paradigms. Act as a technical and architectural advisor for new initiatives, designing scalable, secure, and resilient software, data, and ML solutions using proven patterns, corporate standards, and advanced engineering practices. Define and govern cross-domain practices spanning software engineering, data engineering, and ML lifecycle management, with strong emphasis on code quality, data integrity, reproducibility, security, and operational excellence. Drive adoption of Agentic AI Software Engineering through Spec‑Driven Development using frameworks such as GitHub SpecKit and OpenSpec, enabling teams to define executable specifications consumed by AI agents to generate, validate, and evolve codebases in a controlled and auditable way. Promote the use of tools such as GitHub Copilot CLI, OpenCode, Gemini CLI, and Claude Code to enhance productivity across code generation, testing, documentation, and analysis. Enable DevOps and MLOps practices with CI/CD and CI/CT pipelines, automation, and governed promotion of applications, data pipelines, and ML models. Leverage Generative AI and agentic workflows to improve development efficiency, observability, root cause analysis, and model diagnostics. Lead legacy modernization initiatives using documentation-driven and AI-assisted reverse engineering to transform monolithic systems into scalable, maintainable architectures, while mentoring multidisciplinary teams in AI-augmented, specification-first delivery practices. Focus on: Cloud Platforms, Custom application stacks, DevOps and CI/CD, Software & Data Architectures, Data Science and MLOps, Generative & Agentic AI, Legacy modernization.</p>
 
-						<h3>South America IT Regional Architect</h3>
-						<h4><a href="https://www.viterra.com/" target="_blank">Viterra/Bunge</a>, June 2024 - September 2025</h4>
-						<p>Responsible for designing and advising on the technology infrastructure and systems that support the organization's business operations, providing guidance to ensure the IT environment is scalable, secure, and aligned with strategic objectives. Key responsibilities include developing and maintaining the overall architecture framework and IT strategy in collaboration with stakeholders, and designing end-to-end solutions for IT systems—spanning hardware, software, network, and cloud-based systems—while ensuring scalability and security. This role involves designing and implementing system integration strategies to ensure seamless communication and data exchange. Furthermore, it encompasses risk management, establishing IT governance policies and best practices, and evaluating/selecting third-party products and services through vendor management. The role requires close collaboration with IT professionals and involves creating and maintaining detailed architectural documentation, including blueprints and roadmaps. Focus areas include Enterprise Architecture, Data Architecture, and Software Architecture Assessment.</p>
+            <!-- PROFILE SECTION -->
+            <section id="profile">
+                <h2>Profile Summary</h2>
+                <div class="alert-box">
+                    <p>
+                        Senior AI Solutions Architect with extensive expertise in designing, implementing, and governing high-impact technology solutions across the cloud-native and custom application landscapes. Proficient in Java, C#, and major cloud platforms, driving architectural excellence through strategic technology selection and hands-on delivery. Educational foundation includes a B.S. in Computer Engineering from UTN, complemented by an ongoing M.D. in Data Science at Universidad Austral, where research and practice focus on machine learning, advanced analytics, and the engineering of Agentic AI systems. Expert at bridging the gap between software architecture, data engineering, and AI-enabled development, leveraging DevOps and MLOps principles—including CI/CD, reproducibility, and environment automation—to ensure operational excellence. Actively integrates Generative AI and Agentic AI-first practices for code refactoring, architecture analysis, and automated decision support, with a steadfast commitment to building scalable, secure, and resilient enterprise ecosystems.
+                    </p>
+                </div>
+            </section>
 
-						<h3>Solution Architecture Expert</h3>
-						<h4><a href="https://www.chazki.com/" target="_blank">Chazki</a>, September 2023 - May 2024</h4>
-						<p>Oversaw system architecture assessment and provide recommendations, focusing on the design of improved components and guiding teams on best practices for architecture patterns implementation, testing, and usability. A major initiative was consolidating multiple application stacks into a single, new Agnostic Cloud Deployment Framework. This role required designing efficient, secure, and scalable hardware, software, and infrastructure solutions. Key responsibilities included project planning, selecting appropriate technologies, implementing a strong security approach, and optimizing system performance, troubleshooting, maintenance, and evolution to meet changing business needs. I was also responsible for maintaining detailed documentation, assessing and mitigating risks, establishing technical standards, and collaborating closely with development teams. Focus on: Cloud Solutions Architecture, Microservices Architecture, IoT Architecture, DevOps.
-</p>
+            <!-- EXPERIENCE SECTION -->
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <!-- Capgemini -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Cloud &amp; Custom Architecture + Data/AI Practice Lead</h3>
+                            <span class="timeline-date">Oct 2025 - Present</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://www.capgemini.com/" target="_blank">Capgemini</a></div>
+                        <div class="timeline-content">
+                            <p>Lead the definition, evolution, and adoption of engineering best practices across cloud platforms, custom application architectures, and Data Science and Machine Learning ecosystems, aligning solutions with client technology landscapes and business objectives while integrating AI-driven development paradigms. Act as a technical and architectural advisor for new initiatives, designing scalable, secure, and resilient software, data, and ML solutions using proven patterns, corporate standards, and advanced engineering practices. Define and govern cross-domain practices spanning software engineering, data engineering, and ML lifecycle management, with strong emphasis on code quality, data integrity, reproducibility, security, and operational excellence. Drive adoption of Agentic AI Software Engineering through Spec‑Driven Development using frameworks such as GitHub SpecKit and OpenSpec, enabling teams to define executable specifications consumed by AI agents to generate, validate, and evolve codebases in a controlled and auditable way. Promote the use of tools such as GitHub Copilot CLI, OpenCode, Gemini CLI, and Claude Code to enhance productivity across code generation, testing, documentation, and analysis. Enable DevOps and MLOps practices with CI/CD and CI/CT pipelines, automation, and governed promotion of applications, data pipelines, and ML models. Leverage Generative AI and agentic workflows to improve development efficiency, observability, root cause analysis, and model diagnostics. Lead legacy modernization initiatives using documentation-driven and AI-assisted reverse engineering to transform monolithic systems into scalable, maintainable architectures, while mentoring multidisciplinary teams in AI-augmented, specification-first delivery practices.</p>
+                            <div style="margin-top: 0.5rem;">
+                                <strong>Focus:</strong> Cloud Platforms, Custom application stacks, DevOps and CI/CD, Software &amp; Data Architectures, Data Science and MLOps, Generative &amp; Agentic AI, Legacy modernization.
+                            </div>
+                        </div>
+                    </div>
 
-						<h3>Solutions Architect</h3>
-						<h4><a href="https://auth0.com" target="_blank">Auth0/Okta</a>, November 2020 - August 2023</h4>
-						<p>Solutions Architect responsible for the Customer Identity Cloud (CIC, formerly Auth0) implementation and best practice coaching for largest customers. Architect and lead the integration of CIC solutions by translating complex business and security requirements into actionable technical designs, requiring deep identity management knowledge. Applied advanced solution design principles to define customer solutions, scope efforts, and provide technical leadership while leading cross-functional teams across Okta. Key responsibilities included assisting customers with architecting, planning, developing, and applying governance for CIC integrations; conducting quality and product usage checks; and developing project plans, issue logs, and status reports. Expertise focused on: Customer Identity and Access Management (CIAM), CIC Platform Extensibility, adapting authentication flows, API RBAC enforcement with OAuth 2.0, and Apps Users Authentication and Authorization with OIDC.</p>
+                    <!-- Viterra -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">South America IT Regional Architect</h3>
+                            <span class="timeline-date">Jun 2024 - Sep 2025</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://www.viterra.com/" target="_blank">Viterra / Bunge</a></div>
+                        <div class="timeline-content">
+                            <p>Responsible for designing and advising on the technology infrastructure and systems that support the organization's business operations, providing guidance to ensure the IT environment is scalable, secure, and aligned with strategic objectives. Key responsibilities include developing and maintaining the overall architecture framework and IT strategy in collaboration with stakeholders, and designing end-to-end solutions for IT systems—spanning hardware, software, network, and cloud-based systems—while ensuring scalability and security. This role involves designing and implementing system integration strategies to ensure seamless communication and data exchange. Furthermore, it encompasses risk management, establishing IT governance policies and best practices, and evaluating/selecting third-party products and services through vendor management. The role requires close collaboration with IT professionals and involves creating and maintaining detailed architectural documentation, including blueprints and roadmaps.</p>
+                            <div style="margin-top: 0.5rem;">
+                                <strong>Focus:</strong> Enterprise Architecture, Data Architecture, and Software Architecture Assessment.
+                            </div>
+                        </div>
+                    </div>
 
-						<h3>Senior Solutions Architect</h3>
-						<h4><a href="https://www.globallogic.com/latam/" target="_blank">GlobalLogic Latam</a>, July 2019 - October 2020</h4>
-						<p>As a strategic designer and planner of solutions in a technology environment, I led the process of developing solutions that fit an enterprise architecture from a business, information, and technical standpoint. My core responsibilities included designing applications and services in solution development teams to mesh ideally with the enterprise environment, controlling solution development, and making technical decisions to positively impact business outcomes by advising on technology utilization. I was responsible for assessing existing systems architecture, conducting architectural system evaluations, and recommending solutions in collaboration with business and technical staff. This involved selecting the most appropriate technology stack, balancing project and enterprise architectural concerns, and performing resource evaluations. Furthermore, I advised on risks related to third-party frameworks/platforms, recommended best practices, and prepared specifications that set solution parameters and final delivery boundaries. The role also included supporting the sales process, developing and raising awareness of internal Architecture practice, and assessing new technologies through proofs of concept and creation of solution prototypes, with a focus on Cloud Solutions Architecture, Microservices Architecture, DevOps, Business analysis, and Project and product management.</p>
+                    <!-- Chazki -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Solution Architecture Expert</h3>
+                            <span class="timeline-date">Sep 2023 - May 2024</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://www.chazki.com/" target="_blank">Chazki</a></div>
+                        <div class="timeline-content">
+                            <p>Oversaw system architecture assessment and provide recommendations, focusing on the design of improved components and guiding teams on best practices for architecture patterns implementation, testing, and usability. A major initiative was consolidating multiple application stacks into a single, new Agnostic Cloud Deployment Framework. This role required designing efficient, secure, and scalable hardware, software, and infrastructure solutions. Key responsibilities included project planning, selecting appropriate technologies, implementing a strong security approach, and optimizing system performance, troubleshooting, maintenance, and evolution to meet changing business needs. I was also responsible for maintaining detailed documentation, assessing and mitigating risks, establishing technical standards, and collaborating closely with development teams.</p>
+                            <div style="margin-top: 0.5rem;">
+                                <strong>Focus:</strong> Cloud Solutions Architecture, Microservices Architecture, IoT Architecture, DevOps.
+                            </div>
+                        </div>
+                    </div>
 
-						<h3>Technology Manager</h3>
-						<h4><a href="https://es.nttdata.com/" target="_blank">everis/NTT Data</a>, October 2006 - June 2019</h4>
-						<p>I led complex technology projects across banking, insurance, telecom, and energy sectors, bridging business needs with development teams and external vendors. I designed scalable, high-availability architectures, integrating legacy core systems with modern web, mobile, and cloud solutions to ensure interoperability, resilience, and alignment with strategic objectives. I focused on modernizing front-ends and building integration layers to decouple user experience from monolithic backends. I designed and oversaw software architectures, middleware, REST APIs, SOA, and big data solutions with an emphasis on scalability and operational continuity. I led multidisciplinary teams and coordinated external vendors, managing resources, schedules, and risk. I drove technology PoCs and pilots with Node.js, AngularJS, Docker, Cloudera, IBM WebSphere, and Oracle SOA Suite, setting adoption guidelines and best practices. My role included supporting pre-sales and proposal development, providing architectural vision and technical feasibility aligned with business goals, along with project delivery support. I led design and implementation of Cloud Solutions on AWS, MS Azure, and Google CP, as well as Big Data Architectures on Hadoop and Cloudera. I focused on the design and implementation of generic System Architectures, suitable tech stacks, best practices, high availability, and microservices orientation. The position involved assessment and advisory of existing architectures, research and Proofs of Concept with emerging technologies, development of internal Digital Architecture Knowledge Practices, advice on methodology and corporate tool usage, coordination with the Corporate Tech Team, and internal R&D projects following and coordination.</p>
+                    <!-- Auth0 / Okta -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Solutions Architect</h3>
+                            <span class="timeline-date">Nov 2020 - Aug 2023</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://auth0.com" target="_blank">Auth0 / Okta</a></div>
+                        <div class="timeline-content">
+                            <p>Solutions Architect responsible for the Customer Identity Cloud (CIC, formerly Auth0) implementation and best practice coaching for largest customers. Architect and lead the integration of CIC solutions by translating complex business and security requirements into actionable technical designs, requiring deep identity management knowledge. Applied advanced solution design principles to define customer solutions, scope efforts, and provide technical leadership while leading cross-functional teams across Okta. Key responsibilities included assisting customers with architecting, planning, developing, and applying governance for CIC integrations; conducting quality and product usage checks; and developing project plans, issue logs, and status reports.</p>
+                            <div style="margin-top: 0.5rem;">
+                                <strong>Focus:</strong> Customer Identity and Access Management (CIAM), CIC Platform Extensibility, adapting authentication flows, API RBAC enforcement with OAuth 2.0, and Apps Users Authentication and Authorization with OIDC.
+                            </div>
+                        </div>
+                    </div>
 
-						<h3>Information Systems Consultant</h3>
-						<h4><a href="https://www.fujitsu.com/us/microsite/management-consulting-services/" target="_blank">DMR Consulting/Fujitsu Consulting</a>, December 2000 - September 2006</h4>
-						<p>I led and participated in international technology consulting projects for the financial services, insurance, telecom, healthcare, and European government sectors. My responsibilities included Architecture & System Design, where I defined and implemented multichannel architectures, integrated heterogeneous platforms (J2EE, .NET, SAP, AS/400, mainframes), and designed scalable solutions focused on interoperability and performance. For Project & Team Leadership, I coordinated distributed teams across Argentina, Brazil, Mexico, Venezuela, the U.S., and Europe, delivering onshore and offshore projects under strict international quality standards. In Application Development & Evolution, I built multilingual web applications, core commercial systems, and financial front-ends using Java/J2EE, C#, ASP.NET, VB6, T-SQL, Informix, Oracle, and SQL Server. I ensured Enterprise Integration & Middleware using WebLogic, iPlanet, SunONE, Vitria, MQSeries, and MSMQ to guarantee reliable enterprise interoperability. Furthermore, I handled Technology Evaluation & PoCs by conducting architecture assessments, providing strategic recommendations, delivering proof-of-concepts for new platforms, and defining technology roadmaps for global clients. This role consolidated my expertise as a Solutions Architect, enabling me to bridge technology vision with business strategy and manage the complexity of mission-critical projects in multinational environments. </p>
+                    <!-- GlobalLogic -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Senior Solutions Architect</h3>
+                            <span class="timeline-date">Jul 2019 - Oct 2020</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://www.globallogic.com/latam/" target="_blank">GlobalLogic Latam</a></div>
+                        <div class="timeline-content">
+                            <p>As a strategic designer and planner of solutions in a technology environment, I led the process of developing solutions that fit an enterprise architecture from a business, information, and technical standpoint. My core responsibilities included designing applications and services in solution development teams to mesh ideally with the enterprise environment, controlling solution development, and making technical decisions to positively impact business outcomes by advising on technology utilization. I was responsible for assessing existing systems architecture, conducting architectural system evaluations, and recommending solutions in collaboration with business and technical staff. This involved selecting the most appropriate technology stack, balancing project and enterprise architectural concerns, and performing resource evaluations. Furthermore, I advised on risks related to third-party frameworks/platforms, recommended best practices, and prepared specifications that set solution parameters and final delivery boundaries. The role also included supporting the sales process, developing and raising awareness of internal Architecture practice, and assessing new technologies through proofs of concept and creation of solution prototypes.</p>
+                            <div style="margin-top: 0.5rem;">
+                                <strong>Focus:</strong> Cloud Solutions Architecture, Microservices Architecture, DevOps, Business analysis, and Project and product management.
+                            </div>
+                        </div>
+                    </div>
 
-					<h2>EDUCATION</h2>
-						<h3>Magister en Ciencia de Datos (eq. to M.D. in Data Science).</h3>
-						<strong>Universidad Austral (2024 - Present). Buenos Aires, Argentina.</strong>
-						Curriculum focused on core subjects including Statistics, Data Mining, and Machine Learning, with emphasis on practical, ethical data usage and decision-making for professional implementation. Study includes specialized topics such as Advanced Analytics, MLOps, and the Engineering of Agentic AI systems.
-						<h3>Ingeniero en Sistemas de Información (eq. to B.S. in Computer Engineering).</h3> 
-						<strong>UTN (1994 - 1999). San Miguel de Tucumán, Argentina.</strong> 
-                        Advanced specialization focusing on modern industry topics including Data Science, Software Quality, Simulation, Artificial Intelligence, and Information Security, culminating in a Final Project.
-						<h3>Analista Universitario de Sistemas (eq. to A.S. in Computer Analysis).</h3> 
-						<strong>UTN (1994 - 1998). San Miguel de Tucumán, Argentina.</strong>
-						Core curriculum focused on Software Engineering principles, System Architecture Design, Algorithms and Data Structures, and Database Management, establishing a foundational expertise for complex enterprise solution roles. 
+                    <!-- everis / NTT Data -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Technology Manager</h3>
+                            <span class="timeline-date">Oct 2006 - Jun 2019</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://es.nttdata.com/" target="_blank">everis / NTT Data</a></div>
+                        <div class="timeline-content">
+                            <p>I led complex technology projects across banking, insurance, telecom, and energy sectors, bridging business needs with development teams and external vendors. I designed scalable, high-availability architectures, integrating legacy core systems with modern web, mobile, and cloud solutions to ensure interoperability, resilience, and alignment with strategic objectives. I focused on modernizing front-ends and building integration layers to decouple user experience from monolithic backends. I designed and oversaw software architectures, middleware, REST APIs, SOA, and big data solutions with an emphasis on scalability and operational continuity. I led multidisciplinary teams and coordinated external vendors, managing resources, schedules, and risk. I drove technology PoCs and pilots with Node.js, AngularJS, Docker, Cloudera, IBM WebSphere, and Oracle SOA Suite, setting adoption guidelines and best practices. My role included supporting pre-sales and proposal development, providing architectural vision and technical feasibility aligned with business goals, along with project delivery support. I led design and implementation of Cloud Solutions on AWS, MS Azure, and Google CP, as well as Big Data Architectures on Hadoop and Cloudera. I focused on the design and implementation of generic System Architectures, suitable tech stacks, best practices, high availability, and microservices orientation. The position involved assessment and advisory of existing architectures, research and Proofs of Concept with emerging technologies, development of internal Digital Architecture Knowledge Practices, advice on methodology and corporate tool usage, coordination with the Corporate Tech Team, and internal R&D projects following and coordination.</p>
+                        </div>
+                    </div>
 
-					<h2>LANGUAGES</h2>
-						<p><strong>Spanish:</strong> Native Proficiency (C2)</p>
-						<p><strong>English:</strong> Fluent (Cambridge FCE - B2 Certified, 2004)</p>
-						<p><strong>French:</strong> Upper Intermediate (DELF B2 Certified, 2008)</p>
-						<p><strong>Portuguese:</strong> Upper Intermediate (B2)</p>
-						<p><strong>Italian:</strong> Intermediate (B1 Certified, 2016)</p>
-						<p><strong>German:</strong> Intermediate (B1)</p>
+                    <!-- DMR Consulting / Fujitsu -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Information Systems Consultant</h3>
+                            <span class="timeline-date">Dec 2000 - Sep 2006</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://www.fujitsu.com/us/microsite/management-consulting-services/" target="_blank">DMR Consulting / Fujitsu Consulting</a></div>
+                        <div class="timeline-content">
+                            <p>I led and participated in international technology consulting projects for the financial services, insurance, telecom, healthcare, and European government sectors. My responsibilities included Architecture &amp; System Design, where I defined and implemented multichannel architectures, integrated heterogeneous platforms (J2EE, .NET, SAP, AS/400, mainframes), and designed scalable solutions focused on interoperability and performance. For Project &amp; Team Leadership, I coordinated distributed teams across Argentina, Brazil, Mexico, Venezuela, the U.S., and Europe, delivering onshore and offshore projects under strict international quality standards. In Application Development &amp; Evolution, I built multilingual web applications, core commercial systems, and financial front-ends using Java/J2EE, C#, ASP.NET, VB6, T-SQL, Informix, Oracle, and SQL Server. I ensured Enterprise Integration &amp; Middleware using WebLogic, iPlanet, SunONE, Vitria, MQSeries, and MSMQ to guarantee reliable enterprise interoperability. Furthermore, I handled Technology Evaluation &amp; PoCs by conducting architecture assessments, providing strategic recommendations, delivering proof-of-concepts for new platforms, and defining technology roadmaps for global clients. This role consolidated my expertise as a Solutions Architect, enabling me to bridge technology vision with business strategy and manage the complexity of mission-critical projects in multinational environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-					<h2>SKILLS</h2>
-						<p><strong>Architecture, Governance & Methodology:</strong> Enterprise Architecture (ARIS, ArchiMate, UML), RUP, Design Patterns, Microservices, SOA, Lambda. Project Management (PMI, Scrum, Kanban, COBIT, ITIL, ACORD).
-</p>
-						<p><strong>AI, MLOps & Data Engineering:</strong> LLM, RAG, Agentic AI SWE (Spec Driven Development, GitHub Copilot CLI, Gemini CLI), MLOps, Time Series Forecasting. Big Data (Hadoop, Cloudera, Spark, Hive). Databases (Oracle, PostgreSQL, MySQL, SQL Server, MongoDB, HBase). Analytics & BI (Python/Jupyter, R/R Studio, Pentaho, Qlik, Power BI, Excel).</p>
-Cloud, DevOps & Orchestration: AWS, Azure, Google Cloud (GCP), Netlify, Heroku. CI/CD (GitHub Actions, Jenkins), IaC (Terraform), Containers & Orchestration (Docker, Kubernetes).
-						<p><strong>Integration & Middleware:</strong> REST/SOAP, API Management, SOA Suite (Oracle, WebLogic), EAI Patterns (JMS, MQSeries), MuleSoft, Application Servers (WildFly, Tomcat). Data Transformation (XSLT).</p>
-						<p><strong>Identity & Security (CIAM):</strong> OAuth 2.0, OpenID Connect (OIDC), SAML, SCIM, API RBAC Enforcement.</p>
-						<p><strong>Programming & Frameworks:</strong> Java, Python, Go, C#, C/C++, Node.js, Pascal. Frameworks (.NET, Spring Boot, Express.js).</p>
-						<p><strong>Web Development & Tools:</strong> HTML5, CSS3, JavaScript, Bootstrap, Responsive Design, XML, JSON. Version Control (Git, GitHub). IDEs (VS Code, IntelliJ, Eclipse).</p>
-						<p><strong>Blockchain & IoT:</strong> Ethereum, Solidity, Smart Contracts, DApps, Web3.js, Tokenization. IoT (Arduino, MQTT, Real-time Data Transmission, Sensor Control).</p>
+            <!-- EDUCATION SECTION -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <!-- Austral -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Magister en Ciencia de Datos <span style="font-weight: normal; font-size: 0.95rem; color: var(--text-secondary);">(eq. to M.D. in Data Science)</span></h3>
+                            <span class="timeline-date">2024 - Present</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://www.austral.edu.ar/" target="_blank">Universidad Austral</a>, Buenos Aires, Argentina</div>
+                        <div class="timeline-content">
+                            <p>Curriculum focused on core subjects including Statistics, Data Mining, and Machine Learning, with emphasis on practical, ethical data usage and decision-making for professional implementation. Study includes specialized topics such as Advanced Analytics, MLOps, and the Engineering of Agentic AI systems.</p>
+                        </div>
+                    </div>
 
-			        <a href="#top">&lt;Back to top&gt;</a>
+                    <!-- UTN B.S. -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Ingeniero en Sistemas de Información <span style="font-weight: normal; font-size: 0.95rem; color: var(--text-secondary);">(eq. to B.S. in Computer Engineering)</span></h3>
+                            <span class="timeline-date">1994 - 1999</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://utn.edu.ar/es/" target="_blank">Universidad Tecnológica Nacional (UTN)</a>, San Miguel de Tucumán, Argentina</div>
+                        <div class="timeline-content">
+                            <p>Advanced specialization focusing on modern industry topics including Data Science, Software Quality, Simulation, Artificial Intelligence, and Information Security, culminating in a Final Project.</p>
+                        </div>
+                    </div>
 
-					<a href="index.html">&lt;Home&gt;</a>
-            </main>
-			<footer>
+                    <!-- UTN A.S. -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Analista Universitario de Sistemas <span style="font-weight: normal; font-size: 0.95rem; color: var(--text-secondary);">(eq. to A.S. in Computer Analysis)</span></h3>
+                            <span class="timeline-date">1994 - 1998</span>
+                        </div>
+                        <div class="timeline-company"><a href="https://utn.edu.ar/es/" target="_blank">Universidad Tecnológica Nacional (UTN)</a>, San Miguel de Tucumán, Argentina</div>
+                        <div class="timeline-content">
+                            <p>Core curriculum focused on Software Engineering principles, System Architecture Design, Algorithms and Data Structures, and Database Management, establishing a foundational expertise for complex enterprise solution roles.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANGUAGES SECTION -->
+            <section id="languages">
+                <h2>Languages</h2>
+                <div class="languages-grid">
+                    <div class="language-card">
+                        <span class="language-name">Spanish</span>
+                        <span class="language-level">C2 Native</span>
+                    </div>
+                    <div class="language-card">
+                        <span class="language-name">English</span>
+                        <span class="language-level">B2 Fluent</span>
+                    </div>
+                    <div class="language-card">
+                        <span class="language-name">French</span>
+                        <span class="language-level">B2 Upper Int</span>
+                    </div>
+                    <div class="language-card">
+                        <span class="language-name">Portuguese</span>
+                        <span class="language-level">B2 Upper Int</span>
+                    </div>
+                    <div class="language-card">
+                        <span class="language-name">Italian</span>
+                        <span class="language-level">B1 Intermediate</span>
+                    </div>
+                    <div class="language-card">
+                        <span class="language-name">German</span>
+                        <span class="language-level">B1 Intermediate</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills">
+                <h2>Skills &amp; Expertise</h2>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <h3>Architecture, Governance &amp; Methodology</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Enterprise Architecture (ARIS, ArchiMate, UML)</span>
+                            <span class="skill-tag">RUP</span>
+                            <span class="skill-tag">Design Patterns</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">SOA</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag">Project Management (PMI, Scrum, Kanban, COBIT, ITIL, ACORD)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>AI, MLOps &amp; Data Engineering</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LLM</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">Agentic AI SWE (Spec Driven Development, GitHub Copilot CLI, Gemini CLI)</span>
+                            <span class="skill-tag">MLOps</span>
+                            <span class="skill-tag">Time Series Forecasting</span>
+                            <span class="skill-tag">Big Data (Hadoop, Cloudera, Spark, Hive)</span>
+                            <span class="skill-tag">Databases (Oracle, PostgreSQL, MySQL, SQL Server, MongoDB, HBase)</span>
+                            <span class="skill-tag">Analytics &amp; BI (Python/Jupyter, R/R Studio, Pentaho, Qlik, Power BI, Excel)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Cloud, DevOps &amp; Orchestration</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Google Cloud (GCP)</span>
+                            <span class="skill-tag">Netlify</span>
+                            <span class="skill-tag">Heroku</span>
+                            <span class="skill-tag">CI/CD (GitHub Actions, Jenkins)</span>
+                            <span class="skill-tag">IaC (Terraform)</span>
+                            <span class="skill-tag">Containers &amp; Orchestration (Docker, Kubernetes)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Integration &amp; Middleware</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">REST/SOAP</span>
+                            <span class="skill-tag">API Management</span>
+                            <span class="skill-tag">SOA Suite (Oracle, WebLogic)</span>
+                            <span class="skill-tag">EAI Patterns (JMS, MQSeries)</span>
+                            <span class="skill-tag">MuleSoft</span>
+                            <span class="skill-tag">Application Servers (WildFly, Tomcat)</span>
+                            <span class="skill-tag">Data Transformation (XSLT)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Identity &amp; Security (CIAM)</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OAuth 2.0</span>
+                            <span class="skill-tag">OpenID Connect (OIDC)</span>
+                            <span class="skill-tag">SAML</span>
+                            <span class="skill-tag">SCIM</span>
+                            <span class="skill-tag">API RBAC Enforcement</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Programming &amp; Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Pascal</span>
+                            <span class="skill-tag">Frameworks (.NET, Spring Boot, Express.js)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Web Development &amp; Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">XML</span>
+                            <span class="skill-tag">JSON</span>
+                            <span class="skill-tag">Version Control (Git, GitHub)</span>
+                            <span class="skill-tag">IDEs (VS Code, IntelliJ, Eclipse)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Blockchain &amp; IoT</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Ethereum</span>
+                            <span class="skill-tag">Solidity</span>
+                            <span class="skill-tag">Smart Contracts</span>
+                            <span class="skill-tag">DApps</span>
+                            <span class="skill-tag">Web3.js</span>
+                            <span class="skill-tag">Tokenization</span>
+                            <span class="skill-tag">IoT (Arduino, MQTT, Real-time Data Transmission, Sensor Control)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div style="margin-top: 3rem; display: flex; justify-content: space-between;">
+                <a href="#top" class="back-link">&uarr; Back to Top</a>
+                <a href="index.html" class="back-link">&larr; Home</a>
+            </div>
+
+            <footer>
                 <p>
-                    &copy;2026 by Jorge Nicolau - <a
-                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/minimal"
-                        >v:2026.0620-minimal</a
+                    &copy;2026 by Jorge Nicolau - v:<a
+                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/minimal" target="_blank"
+                        >2026.0620-minimal</a
                     >
                 </p>
             </footer>
-        </div>
-    </body>
+        </main>
+    </div>
+
+    <!-- Theme toggling script -->
+    <script>
+        const toggleCheckbox = document.getElementById('theme-toggle-checkbox');
+        
+        // Initial setup based on current theme attribute
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            toggleCheckbox.checked = true;
+        }
+
+        toggleCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
 </html>
