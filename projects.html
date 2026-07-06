@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jorge Nicolau - Projects</title>
+    <link rel="icon" href="images/favicon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Inline script to set the theme before rendering to avoid flicker -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/profilebw.png" alt="Jorge Nicolau" />
+                <h1 class="sidebar-title">Jorge Nicolau</h1>
+                <p class="sidebar-subtitle">AI Solution Architect</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-item">
+                    <span class="info-label">Role</span>
+                    <span class="info-value">AI & Data Practice Lead</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Location</span>
+                    <span class="info-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos
+                            Aires, AR</a></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Current Org</span>
+                    <span class="info-value"><a href="https://www.capgemini.com/" target="_blank">Capgemini</a></span>
+                </div>
+            </div>
+
+            <nav>
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="resume.html">Resume / CV</a></li>
+                    <li><a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/georgsmeinung" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-toggle-container">
+                <span class="theme-label">Dark Mode</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <h1>Projects & Initiatives</h1>
+                <p class="lead-subtitle">Showcasing academic works, open data initiatives, and advanced AI engineering projects.</p>
+                <div class="badges-row">
+                    <span class="badge-pill badge-blue">Academic Research</span>
+                    <span class="badge-pill badge-teal">AI & Data</span>
+                    <span class="badge-pill badge-gray">Hardware & IoT</span>
+                </div>
+            </header>
+
+            <section id="projects" style="margin-top: 2.5rem;">
+                <div class="skills-container">
+                    
+                    <!-- Project 1 -->
+                    <div class="skill-card">
+                        <h3>Navegación Autónoma de Drones</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Master's thesis project simulating eVTOL drone flight in urban environments using Unreal Engine, LangGraph, YOLOv8n, and local Small Language Models (SLM) for deliberative obstacle avoidance.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.25rem;">
+                            <span class="skill-tag">Unreal Engine 5</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">YOLOv8</span>
+                            <span class="skill-tag">SLM</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                        <a href="https://jorgenicolau.ar/dronelm/" target="_blank" class="btn-link" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Project &nearrow;</a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="skill-card">
+                        <h3>Simulación en Ciencia de Datos</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Comprehensive data science simulation project implementing Linear Congruential Generators (LCG), Monte Carlo, Metropolis-Hastings, discrete event simulations (M/M/c), and Gillespie algorithms.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.25rem;">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Monte Carlo</span>
+                            <span class="skill-tag">MCMC</span>
+                            <span class="skill-tag">Gillespie SSA</span>
+                            <span class="skill-tag">Quarto</span>
+                        </div>
+                        <a href="https://jorgenicolau.ar/tpi-simulacion/" target="_blank" class="btn-link" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Project &nearrow;</a>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="skill-card">
+                        <h3>IoT Gateway on a Raspberry Pi</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Domotic home automation hub running on a Raspberry Pi Zero W with a Mosquitto MQTT Broker, Node-RED dashboard, and ESP8266 nodes for DHT22/LDR sensors and high-voltage relays.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.25rem;">
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">MQTT</span>
+                            <span class="skill-tag">Node-RED</span>
+                            <span class="skill-tag">ESP8266</span>
+                            <span class="skill-tag">IoT</span>
+                        </div>
+                        <a href="https://jorgenicolau.ar/iotgatewayonapi/" target="_blank" class="btn-link" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Project &nearrow;</a>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="skill-card">
+                        <h3>Detección de exoplanetas</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Advanced regression analysis detecting and characterizing exoplanets using data collected from the Kepler Space Telescope. Focuses on data preprocessing, feature engineering, and exploratory data analysis.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.25rem;">
+                            <span class="skill-tag">Regression Models</span>
+                            <span class="skill-tag">Kepler Data</span>
+                            <span class="skill-tag">EDA</span>
+                            <span class="skill-tag">R / Python</span>
+                        </div>
+                        <a href="https://jorgenicolau.ar/ra-tp-final" target="_blank" class="btn-link" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Project &nearrow;</a>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="skill-card">
+                        <h3>Argentina Demographics 1869-2022</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Open dataset hosted on Kaggle containing historical census data from Argentina, ranging from the first national census in 1869 to 2022, structured for historical demographic analysis.</p>
+                        <div class="skill-tags" style="margin-bottom: 1.25rem;">
+                            <span class="skill-tag">Kaggle Dataset</span>
+                            <span class="skill-tag">Open Data</span>
+                            <span class="skill-tag">Demographics</span>
+                            <span class="skill-tag">INDEC</span>
+                        </div>
+                        <a href="https://www.kaggle.com/datasets/jorquenlau/argentina-demographics-1869-2022" target="_blank" class="btn-link" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Dataset &nearrow;</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer style="margin-top: 3rem;">
+                <p>
+                    &copy;2026 by Jorge Nicolau - v:<a
+                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/modern"
+                        target="_blank">2026.0706-modern</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Theme toggling script -->
+    <script>
+        const toggleCheckbox = document.getElementById('theme-toggle-checkbox');
+
+        // Initial setup based on current theme attribute
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            toggleCheckbox.checked = true;
+        }
+
+        toggleCheckbox.addEventListener('change', function () {
+            if (this.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+
+</html>
