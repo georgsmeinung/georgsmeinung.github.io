@@ -727,7 +727,7 @@ main > header {
 
 .timeline-dot {
   position: absolute;
-  left: -2.3rem;
+  left: -2rem;
   top: 7px;
   width: 12px;
   height: 12px;
