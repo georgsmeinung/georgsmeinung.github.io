@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    <!-- 3D Three.js Geodesic Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
     <div class="container">
         <!-- Sidebar Navigation -->
         <aside>
@@ -81,6 +84,7 @@
                         Account</a>
                     <span class="badge-pill badge-gray">AI & Data Practice Lead</span>
                     <span class="badge-pill badge-orange">Buenos Aires, Argentina</span>
+                    <button onclick="window.print()" class="badge-pill badge-blue no-print" style="cursor: pointer; border: 1px solid var(--primary-border); display: inline-flex; align-items: center; gap: 4px;">🖨️ Print / Save PDF</button>
                 </div>
             </header>
 
@@ -536,6 +540,10 @@
             }
         });
     </script>
+
+    <!-- Three.js Library & Geodesic Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/geodesic-bg.js"></script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
 
   /* Type */
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-heading: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
 
   /* Shape & motion */
@@ -138,13 +138,24 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   background:
     radial-gradient(48rem 32rem at 12% -8%, var(--primary-glow), transparent 60%),
     radial-gradient(38rem 28rem at 96% 4%, rgba(6, 182, 212, 0.10), transparent 62%),
     radial-gradient(42rem 30rem at 70% 100%, rgba(99, 102, 241, 0.08), transparent 65%);
   transition: opacity var(--transition-speed);
+}
+
+/* 3D Three.js Geodesic Background Canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
 }
 
 ::selection {
@@ -185,6 +196,7 @@ body::before {
 .container {
   display: flex;
   min-height: 100vh;
+  position: relative;
 }
 
 aside {
@@ -206,6 +218,8 @@ aside {
 }
 
 main {
+  position: relative;
+  z-index: 1;
   flex: 1;
   margin-left: var(--sidebar-width);
   padding: 5rem 5rem 3rem;
@@ -1008,12 +1022,13 @@ main > footer p {
   }
 }
 
-/* Scroll-linked reveal where supported; a no-op everywhere else */
+/* Scroll-linked reveal where supported on screen; a no-op everywhere else */
 @supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
+  @media screen and (prefers-reduced-motion: no-preference) {
     .skill-card,
     .timeline-item,
-    .language-card {
+    .language-card,
+    .education-card {
       animation: rise-in linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 45%;
@@ -1157,41 +1172,338 @@ main > footer p {
 }
 
 /* ==========================================================================
-   Print — flatten to a clean CV sheet
+   Print — clean, compact, professional CV sheet
    ========================================================================== */
 
+@page {
+  margin: 12mm 15mm 15mm 15mm;
+  size: A4 portrait;
+}
+
 @media print {
+  /* 1. Global Print Theme Overrides (Neutralizes Dark Mode during print) */
+  :root,
+  [data-theme="dark"],
+  [data-theme="light"],
+  html,
+  body {
+    --bg-primary: #ffffff !important;
+    --bg-secondary: #ffffff !important;
+    --bg-elevated: #ffffff !important;
+    --card-bg: #ffffff !important;
+    --text-primary: #0f172a !important;
+    --text-secondary: #334155 !important;
+    --text-muted: #475569 !important;
+    --primary: #1d4ed8 !important;
+    --primary-hover: #1d4ed8 !important;
+    --primary-light: #f8fafc !important;
+    --primary-border: #cbd5e1 !important;
+    --border-color: #cbd5e1 !important;
+    --border-strong: #94a3b8 !important;
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    font-size: 9.5pt !important;
+    line-height: 1.45 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 2. Neutralize animations and transitions entirely (Fixes disappearing scroll-linked elements) */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    animation-timeline: auto !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* 3. Hide background canvas, sidebar, ambient aurora, nav, and interactive UI */
+  #bg-canvas,
   body::before,
-  aside {
+  aside,
+  footer,
+  nav,
+  .no-print,
+  .theme-toggle-container,
+  .back-link,
+  .btn-link,
+  #top {
     display: none !important;
   }
 
-  body {
-    background: #fff;
-    color: #000;
+  .container {
+    display: block !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   main {
-    margin-left: 0;
-    max-width: none;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* 4. Header adjustments for print */
+  main > header {
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 2px solid #cbd5e1 !important;
   }
 
   main > header h1 {
-    background: none;
-    -webkit-text-fill-color: #000;
-    color: #000;
+    font-size: 20pt !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.25rem !important;
+    background: none !important;
+    -webkit-text-fill-color: #0f172a !important;
+    color: #0f172a !important;
   }
 
-  .skill-card,
-  .language-card,
+  .lead-subtitle {
+    font-size: 10.5pt !important;
+    color: #475569 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .badges-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .badge-pill {
+    font-size: 8pt !important;
+    padding: 2px 8px !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #f1f5f9 !important;
+    color: #1e293b !important;
+    border-radius: 4px !important;
+  }
+
+  /* 5. Headings & Section flow */
+  h2 {
+    font-size: 12pt !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin-top: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
+    padding-bottom: 0.2rem !important;
+    border-bottom: 1.5px solid #cbd5e1 !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  h3,
+  .timeline-title {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* 6. Summary Alert Box */
+  .alert-box {
+    border: 1px solid #cbd5e1 !important;
+    background-color: #f8fafc !important;
+    padding: 0.6rem 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .alert-box p {
+    font-size: 8.5pt !important;
+    line-height: 1.4 !important;
+    color: #1e293b !important;
+  }
+
+  /* 7. Timeline Styling — Continuous and Crisp */
+  .timeline {
+    border-left: 2px solid #cbd5e1 !important;
+    margin-left: 0.25rem !important;
+    padding-left: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .timeline::before {
+    display: none !important;
+  }
+
   .timeline-item {
-    box-shadow: none;
-    break-inside: avoid;
+    margin-bottom: 0.75rem !important;
+    padding-bottom: 0.25rem !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  .timeline-dot {
+    display: none !important;
+  }
+
+  .timeline-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    margin-bottom: 0.15rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .timeline-date {
+    font-size: 8pt !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 1px 6px !important;
+    border-radius: 4px !important;
+  }
+
+  .timeline-company,
+  .timeline-company a {
+    font-weight: 600 !important;
+    color: #1d4ed8 !important;
+    font-size: 9pt !important;
+    margin-bottom: 0.25rem !important;
+    text-decoration: none !important;
+  }
+
+  .timeline-content,
+  .timeline-content p,
+  .timeline-content div,
+  .timeline-content li,
+  .timeline-content strong {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    color: #1e293b !important;
+  }
+
+  .timeline-content p {
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* 8. Education Section */
+  .education-card {
+    border: 1px solid #cbd5e1 !important;
+    background-color: #ffffff !important;
+    padding: 0.5rem 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .education-card h3 {
+    font-size: 9.5pt !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .education-card p,
+  .education-card div {
+    font-size: 8.5pt !important;
+    color: #1e293b !important;
+  }
+
+  /* 9. Languages Section */
+  .languages-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .language-card {
+    flex: 1 1 28% !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #f8fafc !important;
+    padding: 0.35rem 0.6rem !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .language-name {
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+  }
+
+  .language-level {
+    font-size: 7.5pt !important;
+    color: #475569 !important;
+    background-color: #e2e8f0 !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 1px 4px !important;
+    border-radius: 3px !important;
+  }
+
+  /* 10. Skills & Tags Grid */
+  .skills-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .skill-card {
+    flex: 1 1 45% !important;
+    max-width: 48% !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #ffffff !important;
+    padding: 0.4rem 0.6rem !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .skill-card h3 {
+    font-size: 9pt !important;
+    margin-bottom: 0.25rem !important;
+    color: #0f172a !important;
+  }
+
+  .skill-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.2rem !important;
+  }
+
+  .skill-tag {
+    font-size: 7.5pt !important;
+    padding: 1px 5px !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #f8fafc !important;
+    color: #1e293b !important;
+    border-radius: 2px !important;
+  }
+
+  /* General text fallbacks */
+  p, span, strong, em, li {
+    color: #1e293b !important;
   }
 
   a {
-    color: #000;
-    text-decoration: underline;
+    color: #1d4ed8 !important;
+    text-decoration: none !important;
   }
 }
