@@ -1,6 +1,6 @@
 # Jorge Enrique NICOLAU
 
-## AI Solution & Enterprise Architect, Buenos Aires, Argentina
+## AI Solution Architect, Buenos Aires, Argentina
 
 [`jenicolau@gmail.com`](mailto:jenicolau@gmail.com) \| [`linkedin.com/in/jorgenicolau/`](https://www.linkedin.com/in/jorgenicolau/)| [`jorgenicolau.ar`](https://jorgenicolau.ar)
 
@@ -17,7 +17,7 @@ Lead the definition, evolution, and adoption of engineering best practices acros
 
 ### **South America IT Regional Architect**
 
-Viterra, June 2024 \- September 2025
+Viterra / Bunge, June 2024 \- September 2025
 
 Responsible for designing and advising on the technology infrastructure and systems that support the organization's business operations, providing guidance to ensure the IT environment is scalable, secure, and aligned with strategic objectives. Key responsibilities include developing and maintaining the overall architecture framework and IT strategy in collaboration with stakeholders, and designing end-to-end solutions for IT systems—spanning hardware, software, network, and cloud-based systems—while ensuring scalability and security. This role involves designing and implementing system integration strategies to ensure seamless communication and data exchange. Furthermore, it encompasses risk management, establishing IT governance policies and best practices, and evaluating/selecting third-party products and services through vendor management. The role requires close collaboration with IT professionals and involves creating and maintaining detailed architectural documentation, including blueprints and roadmaps. Focus areas include Enterprise Architecture, Data Architecture, and Software Architecture Assessment. I have also led the exploratory usage of local LLM and RAG solutions to enable natural language querying of operational data.
 
@@ -29,7 +29,7 @@ Oversaw system architecture assessment and provide recommendations, focusing on 
 
 ### **Solutions Architect**
 
-Auth0/Okta, November 2020 \- August 2023
+Auth0 / Okta, November 2020 \- August 2023
 
 Solutions Architect responsible for the Customer Identity Cloud (CIC, formerly Auth0) implementation and best practice coaching for largest customers. Architect and lead the integration of CIC solutions by translating complex business and security requirements into actionable technical designs, requiring deep identity management knowledge. Applied advanced solution design principles to define customer solutions, scope efforts, and provide technical leadership while leading cross-functional teams across Okta. Key responsibilities included assisting customers with architecting, planning, developing, and applying governance for CIC integrations; conducting quality and product usage checks; and developing project plans, issue logs, and status reports. Expertise focused on: Customer Identity and Access Management (CIAM), CIC Platform Extensibility, adapting authentication flows, API RBAC enforcement with OAuth 2.0, and Apps Users Authentication and Authorization with OIDC.
 
@@ -41,13 +41,13 @@ As a strategic designer and planner of solutions in a technology environment, I 
 
 ### **Technology Manager**
 
-everis Argentina, October 2006 \- June 2019
+everis / NTT Data, October 2006 \- June 2019
 
 I led complex technology projects across banking, insurance, telecom, and energy sectors, bridging business needs with development teams and external vendors. I designed scalable, high-availability architectures, integrating legacy core systems with modern web, mobile, and cloud solutions to ensure interoperability, resilience, and alignment with strategic objectives. I focused on modernizing front-ends and building integration layers to decouple user experience from monolithic backends. I designed and oversaw software architectures, middleware, REST APIs, SOA, and big data solutions with an emphasis on scalability and operational continuity. I led multidisciplinary teams and coordinated external vendors, managing resources, schedules, and risk. I drove technology PoCs and pilots with Node.js, AngularJS, Docker, Cloudera, IBM WebSphere, and Oracle SOA Suite, setting adoption guidelines and best practices. My role included supporting pre-sales and proposal development, providing architectural vision and technical feasibility aligned with business goals, along with project delivery support. I led the design and implementation of Cloud Solutions on AWS, MS Azure, and Google CP, as well as Big Data Architectures on Hadoop and Cloudera. I focused on the design and implementation of generic System Architectures, suitable tech stacks, best practices, high availability, and microservices orientation. The position involved assessment and advisory of existing architectures, research and Proofs of Concept with emerging technologies, development of internal Digital Architecture Knowledge Practices, advice on methodology and corporate tool usage, coordination with the Corporate Tech Team, and internal R\&D projects following and coordination. 
 
 ### **Information Systems Consultant**
 
-DMR Consulting Argentina, December 2000 \- September 2006
+DMR Consulting / Fujitsu Consulting, December 2000 \- September 2006
 
 I led and participated in international technology consulting projects for the financial services, insurance, telecom, healthcare, and European government sectors. My responsibilities included Architecture & System Design, where I defined and implemented multichannel architectures, integrated heterogeneous platforms (J2EE, .NET, SAP, AS/400, mainframes), and designed scalable solutions focused on interoperability and performance. For Project & Team Leadership, I coordinated distributed teams across Argentina, Brazil, Mexico, Venezuela, the U.S., and Europe, delivering onshore and offshore projects under strict international quality standards. In Application Development & Evolution, I built multilingual web applications, core commercial systems, and financial front-ends using Java/J2EE, C\#, ASP.NET, VB6, T-SQL, Informix, Oracle, and SQL Server. I ensured Enterprise Integration & Middleware using WebLogic, iPlanet, SunONE, Vitria, MQSeries, and MSMQ to guarantee reliable enterprise interoperability. Furthermore, I handled Technology Evaluation & PoCs by conducting architecture assessments, providing strategic recommendations, delivering proof-of-concepts for new platforms, and defining technology roadmaps for global clients. This role consolidated my expertise as a Solutions Architect, enabling me to bridge technology vision with business strategy and manage the complexity of mission-critical projects in multinational environments. 
 
