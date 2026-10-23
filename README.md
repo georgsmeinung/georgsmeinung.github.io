@@ -2,6 +2,14 @@
 
 This repository contains a modern, responsive personal website and accompanying online resume page. The design features a premium aesthetic utilizing a responsive sidebar layout, dual themes (light and dark), timeline modules, and polished visual identity.
 
+## About this branch
+
+Every branch of this repository is a different visual style of the same personal site, [jorgenicolau.ar](https://jorgenicolau.ar). The content (bio, resume, projects) is shared; only the design and implementation change. See the [`main` branch README](../../tree/main#readme) for the full list of styles.
+
+**`modern` is the active style**: it is the branch GitHub Pages currently publishes at jorgenicolau.ar.
+
+This style was **composed with generative AI**. The layout, styles, scripts, and documentation were produced with AI coding assistants under Jorge Nicolau's direction, then reviewed and refined by hand.
+
 ## Key Features
 
 - **Responsive Fixed Sidebar**: Desktop sticky sidebar layout on the left that transitions into a compact, responsive header and menu on mobile screens.
@@ -11,7 +19,8 @@ This repository contains a modern, responsive personal website and accompanying 
 - **Visual Skills & Expertise Grid**: Categorized tech stack groups formatted into elegant, wrapping tag badges.
 - **Language Proficiency Cards**: Organized grid display with distinct CEFR proficiency indicators (C2, B2, B1).
 - **Project Showcase Page**: Dedicated projects view with card-based highlights across academic research, AI/data initiatives, IoT engineering, and open data contributions.
-- **Zero Heavy Frameworks**: Handcrafted with lightweight, vanilla HTML5, CSS3, and high-performance vanilla JavaScript.
+- **Geodesic 3D Background**: Theme-aware animated geodesic background rendered with Three.js (loaded from a CDN).
+- **Zero Heavy Frameworks**: Built with lightweight, vanilla HTML5, CSS3, and JavaScript; Three.js is the only external library.
 
 ## Contents
 
@@ -19,5 +28,6 @@ This repository contains a modern, responsive personal website and accompanying 
 - `projects.html` — Projects and initiatives page showcasing selected works with tech tags and outbound links.
 - `resume.html` — Detailed CV containing interactive experience timelines, education, languages, and technical skills.
 - `styles/styles.css` — Custom stylesheet defining CSS variables, layouts, and animations.
+- `js/geodesic-bg.js` — Three.js geodesic background component.
 - `images/` — Avatar and favicon image assets.
 - `CNAME` — Custom domain routing configuration.
