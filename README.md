@@ -1,33 +1,34 @@
-Strata by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Jorge Nicolau — Personal Website
 
+Source for [jorgenicolau.ar](https://jorgenicolau.ar), the personal homepage and online resume of Jorge Nicolau (AI Solution & Enterprise Architect, Buenos Aires, Argentina).
 
-A simple, minimalist template that actually began life as an unused redesign of my
-personal site. Includes a (configurable) parallax background effect, Poptrox-powered
-lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
+The site is published with GitHub Pages and contains:
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+- A **homepage** with a short introduction and bio.
+- A **resume** page covering professional experience, education, languages, and skills.
+- In some styles, a **projects** page showcasing academic research, AI/data initiatives, and other work.
 
-(* = Not included)
+## One branch per style
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+Each branch of this repository is a different visual style of the same personal site. The content is the same throughout; only the design and implementation change. GitHub Pages serves whichever branch is set as the publishing source.
 
-AJ
-aj@lkn.io | @ajlkn
+> **Active style: [`modern`](../../tree/modern).** It is the branch currently published at jorgenicolau.ar.
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+| Branch | Style | Based on |
+|---|---|---|
+| [`modern`](../../tree/modern) | **Current live site.** Sidebar layout, light/dark themes, timelines, projects page, and a Three.js background. Composed with generative AI. | Original (vanilla HTML/CSS/JS) |
+| [`minimal`](../../tree/minimal) | Lightweight, handcrafted homepage and resume. | Original (vanilla HTML/CSS) |
+| [`main`](../../tree/main) | Sidebar header with a parallax aerial background. | [Strata](https://html5up.net/strata) by HTML5 UP |
+| [`strata`](../../tree/strata) | Working branch for the Strata style. | [Strata](https://html5up.net/strata) by HTML5 UP |
+| [`zeon`](../../tree/zeon) | Bootstrap 5 layout with scroll animations (AOS) and Remix Icons. | Bootstrap 5 |
+| [`story.design`](../../tree/story.design) | Modular one-page layout. | [Story](https://html5up.net/story) by HTML5 UP |
+| [`helvetica`](../../tree/helvetica) | Earlier variant of the Story-based design. | [Story](https://html5up.net/story) by HTML5 UP |
 
+To switch the live style, change the GitHub Pages source branch in the repository settings (**Settings → Pages**). Each branch that should be served at the custom domain needs a `CNAME` file containing `jorgenicolau.ar`.
 
-Credits:
+## Credits for this branch (`main`)
 
-	Demo Images:
-		Unsplash (unsplash.com)
+This branch uses **Strata** by [HTML5 UP](https://html5up.net) (@ajlkn), free for personal and commercial use under the [CCA 3.0 license](https://html5up.net/license) (see `LICENSE.md`). It also includes:
 
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+- Icons: [Font Awesome](https://fontawesome.com)
+- [jQuery](https://jquery.com) and [Responsive Tools](https://github.com/ajlkn/responsive-tools)
