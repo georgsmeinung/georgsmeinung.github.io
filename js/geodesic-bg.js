@@ -24,23 +24,122 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Theme colors: balanced, visible yet elegant slate-gray tones
+    // Theme colors: balanced, visible yet elegant slate-gray tones.
+    // Each stroke is shaded per vertex: "lit" is the color of a front-facing,
+    // fully illuminated stroke; "shadow" is what back-facing / unlit strokes
+    // fade towards (close to the page background so they recede).
     const themeStyles = {
       dark: {
-        lineColor: 0x64748b,   // slate-500: elegant visible steel slate on dark
-        lineOpacity: 0.26,
-        pointColor: 0x94a3b8,  // slate-400: delicate visible micro-nodes
-        pointOpacity: 0.30,
+        lineLit: 0x94a3b8,     // slate-400
+        lineShadow: 0x475569,  // slate-600: dim but still readable on dark
+        lineOpacity: 0.20,
+        pointLit: 0xcbd5e1,    // slate-300
+        pointShadow: 0x475569, // slate-600
+        pointOpacity: 0.22,
         pointSize: 0.016
       },
       light: {
-        lineColor: 0x94a3b8,   // slate-400: clear neutral slate on light background
-        lineOpacity: 0.20,
-        pointColor: 0x64748b,  // slate-500: delicate visible micro-nodes
-        pointOpacity: 0.25,
+        lineLit: 0x64748b,     // slate-500
+        lineShadow: 0x94a3b8,  // slate-400: dim but still readable on light
+        lineOpacity: 0.15,
+        pointLit: 0x475569,    // slate-600
+        pointShadow: 0x94a3b8, // slate-400
+        pointOpacity: 0.16,
         pointSize: 0.016
       }
     };
+
+    // Shading parameters (shared by lines and points)
+    // - facing: dot(normal, viewDir). On a sphere centered at the origin the
+    //   normal is simply normalize(position), so front (+1) / back (-1) is exact.
+    // - light: wrapped Lambert from a key light in view space (upper-left-front),
+    //   giving a soft illuminated gradient across the visible hemisphere.
+    const shadeChunk = `
+      uniform vec3 uLightDir;
+      varying float vShade;
+      varying float vFade;
+      void computeShade(vec3 objPos, vec4 mvPos) {
+        vec3 n = normalize(normalMatrix * normalize(objPos));
+        vec3 viewDir = normalize(-mvPos.xyz);
+        float facing = dot(n, viewDir);
+        // 0 on the far hemisphere, 1 on the near one, smooth across the limb
+        vFade = smoothstep(-0.55, 0.45, facing);
+        float lambert = (dot(n, uLightDir) + 0.35) / 1.35; // wrap lighting
+        lambert = clamp(lambert, 0.0, 1.0);
+        // back strokes keep a floor of light so they stay visible, just dimmer
+        vShade = mix(0.15, 1.0, vFade) * mix(0.45, 1.0, lambert);
+      }
+    `;
+
+    const shadeFrag = `
+      uniform vec3 uLit;
+      uniform vec3 uShadow;
+      uniform float uOpacity;
+      varying float vShade;
+      varying float vFade;
+    `;
+
+    const lightDir = new THREE.Vector3(-0.45, 0.55, 0.7).normalize();
+
+    function makeLineMaterial(pal) {
+      return new THREE.ShaderMaterial({
+        uniforms: {
+          uLightDir: { value: lightDir },
+          uLit: { value: new THREE.Color(pal.lineLit) },
+          uShadow: { value: new THREE.Color(pal.lineShadow) },
+          uOpacity: { value: pal.lineOpacity }
+        },
+        vertexShader: shadeChunk + `
+          void main() {
+            vec4 mvPos = modelViewMatrix * vec4(position, 1.0);
+            computeShade(position, mvPos);
+            gl_Position = projectionMatrix * mvPos;
+          }
+        `,
+        fragmentShader: shadeFrag + `
+          void main() {
+            vec3 col = mix(uShadow, uLit, vShade);
+            float a = uOpacity * mix(0.5, 1.0, vFade) * mix(0.7, 1.0, vShade);
+            gl_FragColor = vec4(col, a);
+          }
+        `,
+        transparent: true,
+        depthWrite: false
+      });
+    }
+
+    function makePointMaterial(pal) {
+      return new THREE.ShaderMaterial({
+        uniforms: {
+          uLightDir: { value: lightDir },
+          uLit: { value: new THREE.Color(pal.pointLit) },
+          uShadow: { value: new THREE.Color(pal.pointShadow) },
+          uOpacity: { value: pal.pointOpacity },
+          uSize: { value: pal.pointSize },
+          uScale: { value: renderer.getDrawingBufferSize(new THREE.Vector2()).y / 2 }
+        },
+        vertexShader: shadeChunk + `
+          uniform float uSize;
+          uniform float uScale;
+          void main() {
+            vec4 mvPos = modelViewMatrix * vec4(position, 1.0);
+            computeShade(position, mvPos);
+            gl_PointSize = uSize * (uScale / -mvPos.z); // same attenuation as PointsMaterial
+            gl_Position = projectionMatrix * mvPos;
+          }
+        `,
+        fragmentShader: shadeFrag + `
+          void main() {
+            vec3 col = mix(uShadow, uLit, vShade);
+            float a = uOpacity * mix(0.35, 1.0, vFade) * mix(0.6, 1.0, vShade);
+            gl_FragColor = vec4(col, a);
+          }
+        `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+    }
 
     function getCurrentTheme() {
       return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
@@ -57,12 +156,7 @@
     const radius = 2.45;
     const geom = new THREE.IcosahedronGeometry(radius, 8);
     const wireframe = new THREE.WireframeGeometry(geom);
-    const lineMaterial = new THREE.LineBasicMaterial({
-      color: colors.lineColor,
-      transparent: true,
-      opacity: colors.lineOpacity,
-      linewidth: 1
-    });
+    const lineMaterial = makeLineMaterial(colors);
     const mesh = new THREE.LineSegments(wireframe, lineMaterial);
     geodesicGroup.add(mesh);
 
@@ -78,13 +172,7 @@
     // Vertex Micro-Nodes / Particles
     const pointGeom = new THREE.BufferGeometry();
     pointGeom.setAttribute('position', geom.getAttribute('position'));
-    const pointMaterial = new THREE.PointsMaterial({
-      color: colors.pointColor,
-      size: colors.pointSize,
-      transparent: true,
-      opacity: colors.pointOpacity,
-      blending: THREE.AdditiveBlending
-    });
+    const pointMaterial = makePointMaterial(colors);
     const pointMesh = new THREE.Points(pointGeom, pointMaterial);
     geodesicGroup.add(pointMesh);
 
@@ -93,12 +181,14 @@
       const pal = themeStyles[theme];
       if (!pal) return;
 
-      lineMaterial.color.setHex(pal.lineColor);
-      lineMaterial.opacity = pal.lineOpacity;
+      lineMaterial.uniforms.uLit.value.setHex(pal.lineLit);
+      lineMaterial.uniforms.uShadow.value.setHex(pal.lineShadow);
+      lineMaterial.uniforms.uOpacity.value = pal.lineOpacity;
 
-      pointMaterial.color.setHex(pal.pointColor);
-      pointMaterial.opacity = pal.pointOpacity;
-      pointMaterial.size = pal.pointSize;
+      pointMaterial.uniforms.uLit.value.setHex(pal.pointLit);
+      pointMaterial.uniforms.uShadow.value.setHex(pal.pointShadow);
+      pointMaterial.uniforms.uOpacity.value = pal.pointOpacity;
+      pointMaterial.uniforms.uSize.value = pal.pointSize;
     }
 
     // Watch for theme attribute changes on <html>
@@ -130,6 +220,7 @@
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      pointMaterial.uniforms.uScale.value = renderer.getDrawingBufferSize(new THREE.Vector2()).y / 2;
       updateGroupPosition();
     });
 
