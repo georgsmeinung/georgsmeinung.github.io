@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Jorge Nicolau - Resume</title>
     <link rel="icon" href="images/favicon.svg" />
     <!-- Fonts -->
@@ -13,13 +16,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
-    <!-- Inline script to set the theme before rendering to avoid flicker -->
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
+    <!-- Set the theme before rendering to avoid flicker -->
+    <script src="js/theme-init.js"></script>
 </head>
 
 <body>
@@ -521,28 +519,12 @@
     </div>
 
     <!-- Theme toggling script -->
-    <script>
-        const toggleCheckbox = document.getElementById('theme-toggle-checkbox');
-
-        // Initial setup based on current theme attribute
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-            toggleCheckbox.checked = true;
-        }
-
-        toggleCheckbox.addEventListener('change', function () {
-            if (this.checked) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    </script>
+    <script src="js/theme-toggle.js"></script>
 
     <!-- Three.js Library & Geodesic Background -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+        integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/geodesic-bg.js"></script>
 </body>
 
