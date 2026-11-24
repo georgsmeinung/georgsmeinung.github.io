@@ -14,7 +14,7 @@ This style was **composed with generative AI**. The layout, styles, scripts, and
 
 - **Responsive Fixed Sidebar**: Desktop sticky sidebar layout on the left that transitions into a compact, responsive header and menu on mobile screens.
 - **Theme Toggling**: Seamless light & dark mode theme support using CSS custom properties and an interactive toggler, persisting preference via `localStorage`.
-- **Modern Typography**: Uses Google Fonts' `Outfit` for geometric headings and `Inter` for highly readable body text.
+- **Modern Typography**: Uses Google Fonts' `Space Grotesk` for headings, `Geist` for body text and `Geist Mono` for labels and dates.
 - **Interactive Timelines**: Structured vertical timelines for Professional Experience and Education history.
 - **Visual Skills & Expertise Grid**: Categorized tech stack groups formatted into elegant, wrapping tag badges.
 - **Language Proficiency Cards**: Organized grid display with distinct CEFR proficiency indicators (C2, B2, B1).

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <!-- Set the theme before rendering to avoid flicker -->
@@ -24,66 +24,51 @@
     <!-- 3D Three.js Geodesic Background Canvas -->
     <canvas id="bg-canvas"></canvas>
 
-    <div class="container">
-        <!-- Sidebar Navigation -->
-        <aside>
-            <div class="profile-container">
-                <img class="profile-pic" src="images/profilebw.png" alt="Jorge Nicolau" />
-                <h1 class="sidebar-title">Jorge Nicolau</h1>
-                <p class="sidebar-subtitle">AI Solution Architect</p>
-            </div>
-
-            <div class="info-card">
-                <div class="info-item">
-                    <span class="info-label">Role</span>
-                    <span class="info-value">AI & Data Practice Lead</span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Location</span>
-                    <span class="info-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank">Buenos
-                            Aires, AR</a></span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Current Org</span>
-                    <span class="info-value"><a href="https://www.capgemini.com/" target="_blank">Capgemini</a></span>
-                </div>
-            </div>
-
-            <nav>
-                <h5>Navigation</h5>
+    <!-- Top bar -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-pic" src="images/profilebw.png" alt="" />
+                <span>Jorge Nicolau</span>
+            </a>
+            <nav aria-label="Main">
                 <ul>
-                    <li><a href="index.html" class="active">About Me</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume / CV</a></li>
-                    <li><a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/georgsmeinung" target="_blank">GitHub</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" rel="noopener">LinkedIn &nearrow;</a></li>
+                    <li><a href="https://github.com/georgsmeinung" target="_blank" rel="noopener">GitHub &nearrow;</a></li>
                 </ul>
             </nav>
+            <label class="theme-switch" title="Toggle dark mode">
+                <input type="checkbox" id="theme-toggle-checkbox" aria-label="Dark mode">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
 
-            <div class="theme-toggle-container">
-                <span class="theme-label">Dark Mode</span>
-                <label class="theme-switch">
-                    <input type="checkbox" id="theme-toggle-checkbox">
-                    <span class="slider"></span>
-                </label>
+    <!-- Main Content -->
+    <main>
+        <header>
+            <p class="eyebrow">AI Solution Architect &middot; Buenos Aires, AR</p>
+            <h1>Jorge Nicolau</h1>
+            <p class="lead-subtitle">AI Solution Architect &amp; Cloud Custom Architecture + Data/AI Practice Lead</p>
+            <div class="badges-row">
+                <span class="badge-pill badge-blue">Agentic AI SWE</span>
+                <span class="badge-pill">Cloud Platforms</span>
+                <span class="badge-pill">MLOps</span>
+                <span class="badge-pill">Master in Data Sciences (Candidate)</span>
             </div>
-        </aside>
+            <div class="hero-actions">
+                <a href="resume.html" class="btn-link">View Detailed Resume &rarr;</a>
+                <a href="projects.html" class="btn-link">Learn about my projects &rarr;</a>
+                <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" rel="noopener" class="btn-link">LinkedIn
+                    Profile &nearrow;</a>
+            </div>
+        </header>
 
-        <!-- Main Content -->
-        <main>
-            <header>
-                <h1>Jorge Nicolau</h1>
-                <p class="lead-subtitle">AI Solution Architect &amp; Cloud Custom Architecture + Data/AI Practice Lead
-                </p>
-                <div class="badges-row">
-                    <span class="badge-pill badge-blue">Cloud Platforms</span>
-                    <span class="badge-pill badge-teal">Agentic AI SWE</span>
-                    <span class="badge-pill badge-gray">MLOps</span>
-                    <span class="badge-pill badge-orange">Master in Data Sciences (Candidate)</span>
-                </div>
-            </header>
-
-            <section id="about">
+        <section class="bento" aria-label="About and quick facts">
+            <div class="bento-cell bento-about" id="about">
                 <h2>About Me</h2>
                 <article>
                     <p>
@@ -91,28 +76,50 @@
                     </p>
                     <p>
                         I hold a degree in Computer Science from Universidad Tecnológica Nacional, and over the years, my primary toolkit has evolved around Python, Node.js, Java, C#, and major cloud platforms—plus plenty of exposure to Big Data, IoT, and Blockchain. Right now, I lead the Cloud & Custom Architecture + Data/AI Practice at Capgemini. Before this, I spent years refining my skills at places like Okta, Viterra, NTT Data, GlobalLogic, and Chazki.
-                    </p>    
+                    </p>
                     <p>
                         Outside of work, I’m a big-time traveler and a tech enthusiast who loves experimenting with new tools and emerging technologies just for the fun of it. I’m also a bit of a polyglot (currently fluent in 6 languages), a total map geek, and an avid reader of science, sci-fi, and history. Whenever I'm not tweaking code or learning a new tech stack, you'll probably find me planning my next trip or diving down a history rabbit hole!
                     </p>
                 </article>
-                <div style="margin-top: 2.5rem;">
-                    <a href="resume.html" class="btn-link">View Detailed Resume &rarr;</a>
-                    <a href="https://www.linkedin.com/in/jorgenicolau/" target="_blank" class="btn-link">LinkedIn
-                        Profile &nearrow;</a>
-                    <a href="projects.html" class="btn-link">Learn about my projects &nearrow;</a>
-                </div>
-            </section>
-            <br /><br />
-            <footer>
-                <p>
-                    &copy;2026 by Jorge Nicolau - v:<a
-                        href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/modern"
-                        target="_blank">2026.0825-modern</a>
-                </p>
-            </footer>
-        </main>
-    </div>
+            </div>
+
+            <div class="bento-cell bento-fact">
+                <span class="fact-label">Role</span>
+                <span class="fact-value">AI &amp; Data Practice Lead</span>
+            </div>
+            <div class="bento-cell bento-fact">
+                <span class="fact-label">Current Org</span>
+                <span class="fact-value"><a href="https://www.capgemini.com/" target="_blank" rel="noopener">Capgemini</a></span>
+            </div>
+            <div class="bento-cell bento-fact">
+                <span class="fact-label">Location</span>
+                <span class="fact-value"><a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank" rel="noopener">Buenos Aires, AR</a></span>
+            </div>
+
+            <div class="bento-cell bento-wide">
+                <span class="fact-label">Languages</span>
+                <div class="fact-big">6</div>
+                <p class="fact-note">Spanish, English, French, Portuguese, Italian, German</p>
+            </div>
+            <div class="bento-cell bento-wide">
+                <span class="fact-label">Studying</span>
+                <p class="fact-value">MSc Data Science</p>
+                <p class="fact-note">Universidad Austral &middot; agentic systems &amp; LLMs</p>
+            </div>
+            <div class="bento-cell bento-wide">
+                <span class="fact-label">Off the clock</span>
+                <p class="fact-value">Travel &middot; Maps &middot; Sci‑fi &middot; History</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                &copy;2026 by Jorge Nicolau - v:<a
+                    href="https://github.com/georgsmeinung/georgsmeinung.github.io/tree/modern"
+                    target="_blank">2026.1124-modern</a>
+            </p>
+        </footer>
+    </main>
 
     <!-- Theme toggling script -->
     <script src="js/theme-toggle.js"></script>

@@ -24,27 +24,28 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Theme colors: balanced, visible yet elegant slate-gray tones.
+    // Theme colors: warm "ink on paper" lines with vermilion vertex nodes,
+    // matching the site's cartographic palette (see styles.css tokens).
     // Each stroke is shaded per vertex: "lit" is the color of a front-facing,
     // fully illuminated stroke; "shadow" is what back-facing / unlit strokes
     // fade towards (close to the page background so they recede).
     const themeStyles = {
       dark: {
-        lineLit: 0x94a3b8,     // slate-400
-        lineShadow: 0x475569,  // slate-600: dim but still readable on dark
+        lineLit: 0x9a988f,     // warm muted ink
+        lineShadow: 0x4a4943,  // dim but still readable on dark
         lineOpacity: 0.20,
-        pointLit: 0xcbd5e1,    // slate-300
-        pointShadow: 0x475569, // slate-600
-        pointOpacity: 0.22,
+        pointLit: 0xff6a4d,    // vermilion accent
+        pointShadow: 0x5a2a20,
+        pointOpacity: 0.20,
         pointSize: 0.016
       },
       light: {
-        lineLit: 0x64748b,     // slate-500
-        lineShadow: 0x94a3b8,  // slate-400: dim but still readable on light
+        lineLit: 0x6b6a63,     // warm muted ink
+        lineShadow: 0xa8a59b,  // dim but still readable on paper
         lineOpacity: 0.15,
-        pointLit: 0x475569,    // slate-600
-        pointShadow: 0x94a3b8, // slate-400
-        pointOpacity: 0.16,
+        pointLit: 0xb8341a,    // vermilion accent
+        pointShadow: 0xd9a89c,
+        pointOpacity: 0.14,
         pointSize: 0.016
       }
     };
